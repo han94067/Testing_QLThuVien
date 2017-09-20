@@ -57,3 +57,9 @@ E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Antlr3.Runtime.pdb
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csprojResolveAssemblyReference.cache
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.pdb
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\EntityFramework.dll
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\EntityFramework.SqlServer.dll
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\EntityFramework.xml
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\EntityFramework.SqlServer.xml
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.Migrations.Initial.resources
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csproj.GenerateResource.Cache
