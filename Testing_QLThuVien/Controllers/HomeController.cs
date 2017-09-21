@@ -10,8 +10,7 @@ namespace Testing_QLThuVien.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
-
+            ViewBag.Title = "Trang Chủ";
             return View();
         }
     }

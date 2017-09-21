@@ -11,23 +11,10 @@ namespace Testing_QLThuVien.Controllers
     {
         QLThuVien db = new QLThuVien();
 
-        // GET: QLSach
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Sach()
         {
             return View(db.Saches.ToList());
-        }
-
-
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpGet]
-        public ActionResult IndexDG()
-        {
-            return View(db.DocGias.ToList());
         }
     }
 }
