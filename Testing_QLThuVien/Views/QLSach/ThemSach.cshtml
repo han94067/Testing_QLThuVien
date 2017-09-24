@@ -1,67 +1,59 @@
 ﻿@model Testing_QLThuVien.Models.Sach
 
-@{
-    ViewBag.Title = "ThemSach";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
- 
-@using (Html.BeginForm())
+
+@using (Html.BeginForm("ThemSach", "QLSach"))
 {
     @Html.AntiForgeryToken()
-    @*<div class="row">*@
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel">
-            <div class="x_content">           
-                    <div class="form-horizontal form-label-left" novalidate">
-                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                                Tên Sách <span class="required">*</span>
-                            </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">                              
-                                @Html.EditorFor(model => model.TenSach, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.TenSach, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">
-                                Năm Xuất Bản <span class="required">*</span>
-                            </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                @Html.EditorFor(model => model.NamXuatBan, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.NamXuatBan, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">
-                                Số Lượng <span class="required">*</span>
-                            </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                @Html.EditorFor(model => model.SoLuong, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.SoLuong, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">
-                                Trị Giá <span class="required">*</span>
-                            </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                @Html.EditorFor(model => model.TriGia, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.TriGia, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                        
-
-                        <div class="ln_solid"></div>
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-3">                           
-                                <input type="submit" value="Tạo" class="btn btn-success" style="float:right" />                              
-                                <a href="@Url.Action("Sach", "QLSach")" class="btn btn-primary">Trở về</a>                                                                
-                            </div>
-                        </div>
-
-                    </div>            
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Thêm Sách Mới</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-horizontal form-label-left" novalidate">
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                    Tên Sách <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @Html.EditorFor(model => model.TenSach, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TenSach, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">
+                    Năm Xuất Bản <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @Html.EditorFor(model => model.NamXuatBan, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NamXuatBan, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">
+                    Số Lượng <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @Html.EditorFor(model => model.SoLuong, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.SoLuong, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">
+                    Trị Giá <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @Html.EditorFor(model => model.TriGia, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TriGia, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
     </div>
-@*</div>*@
-}            
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+        <input type="submit" class="btn btn-primary" value="Thêm"/>
+    </div>
+}
+
+

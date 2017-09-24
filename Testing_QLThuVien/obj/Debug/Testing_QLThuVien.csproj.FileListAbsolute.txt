@@ -128,68 +128,68 @@ C:\Users\han94\Desktop\QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.M
 C:\Users\han94\Desktop\QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csproj.GenerateResource.Cache
 C:\Users\han94\Desktop\QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.dll
 C:\Users\han94\Desktop\QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.pdb
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\ApplicationInsights.config
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\csc.exe
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\vbc.exe
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\VBCSCompiler.exe
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Testing_QLThuVien.dll.config
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Testing_QLThuVien.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Testing_QLThuVien.pdb
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Antlr3.Runtime.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\EntityFramework.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\EntityFramework.SqlServer.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.Web.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.ApplicationInsights.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Newtonsoft.Json.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Net.Http.Formatting.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Helpers.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Http.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Http.WebHost.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Mvc.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Optimization.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Razor.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.Razor.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\WebGrease.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\EntityFramework.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\EntityFramework.SqlServer.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.Web.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.ApplicationInsights.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Newtonsoft.Json.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Net.Http.Formatting.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Helpers.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Http.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Http.WebHost.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Mvc.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Optimization.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Razor.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.Razor.xml
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\bin\Antlr3.Runtime.pdb
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csprojResolveAssemblyReference.cache
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.Migrations.Initial.resources
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csproj.GenerateResource.Cache
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.dll
-C:\Users\Nam Dao Gam\Desktop\QLThuVien\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.pdb
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\ApplicationInsights.config
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\csc.exe
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\System.Collections.Immutable.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\System.Reflection.Metadata.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\vbc.exe
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\VBCSCompiler.exe
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\VBCSCompiler.exe.config
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Testing_QLThuVien.dll.config
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Testing_QLThuVien.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Testing_QLThuVien.pdb
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Antlr3.Runtime.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\EntityFramework.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\EntityFramework.SqlServer.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.DependencyCollector.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.Web.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.WindowsServer.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.ApplicationInsights.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.Web.Infrastructure.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Newtonsoft.Json.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Net.Http.Formatting.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Helpers.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Http.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Http.WebHost.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Mvc.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Optimization.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Razor.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.Deployment.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.Razor.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\WebGrease.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\EntityFramework.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\EntityFramework.SqlServer.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.DependencyCollector.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.Web.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.WindowsServer.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.ApplicationInsights.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Newtonsoft.Json.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Net.Http.Formatting.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Helpers.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Http.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Http.WebHost.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Mvc.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Optimization.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Razor.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.Deployment.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.Razor.xml
+E:\Testing_QLThuVien\Testing_QLThuVien\bin\Antlr3.Runtime.pdb
+E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csprojResolveAssemblyReference.cache
+E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.Migrations.Initial.resources
+E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csproj.GenerateResource.Cache
+E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.dll
+E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.pdb

@@ -5,15 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<head>
-    <link href="~/Content/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="~/Content/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="~/Content/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="~/Content/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="~/Content/scroller.bootstrap.min.css" rel="stylesheet">
-
-
-</head>
 
 <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
@@ -21,10 +12,9 @@
 
             <div class="x_title">
                 <h2>Dữ Liệu Sách</h2>
-                <ul class="nav navbar-right panel_toolbox">
-                    @*<button type="button" class="btn btn-link" data-toggle="modal" data-target=".bs-example-modal-lg">Thêm Sách</button>*@
-                    <p>@Html.ActionLink("Thêm Sách","ThemSach")</p>
-                </ul>
+                <div class="nav navbar-right panel_toolbox">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Thêm Sách</button>
+                </div>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
@@ -51,69 +41,69 @@
                                 Năm Xuất Bản
                             </th>
                             @*<th>
-                                @Html.DisplayNameFor(model => model.SoLuong)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.SoLuongTon)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.TriGia)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.TinhTrang)
-                            </th>
-                            <th></th>*@
+                                    @Html.DisplayNameFor(model => model.SoLuong)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.SoLuongTon)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.TriGia)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.TinhTrang)
+                                </th>
+                                <th></th>*@
                         </tr>
                     </thead>
 
                     <tbody>
-                        @if (Model == null)
+                        @if (Model.Count() == 0)
                         {
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
                         }
                         else
                         {
                             foreach (var item in Model)
                             {
-                                <tr>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.NhaXuatBan.TenNhaXuatBan)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.TacGia.TenTacGia)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.TenSach)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.HinhAnh)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.NamXuatBan)
-                                    </td>
-                                    @*<td>
-                                        @Html.DisplayFor(modelItem => item.SoLuong)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.SoLuongTon)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.TriGia)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.TinhTrang)
-                                    </td>*@
-                                </tr>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NhaXuatBan.TenNhaXuatBan)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TacGia.TenTacGia)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TenSach)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.HinhAnh)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NamXuatBan)
+                            </td>
+                            @*<td>
+                                    @Html.DisplayFor(modelItem => item.SoLuong)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.SoLuongTon)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TriGia)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TinhTrang)
+                                </td>*@
+                        </tr>
                             }
                         }
                     </tbody>
@@ -123,23 +113,10 @@
     </div>
 </div>
 
-@*<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade bs-example-modal-lg" tabindex="-1">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">×</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">Thêm Sách</h4>
-            </div>
-            <div class="modal-body">
-                <p>@Html.Partial("ThemSach")</p>
-            </div>
+            @Html.Action("ThemSach", "QLSach")
         </div>
     </div>
-</div>*@
-
-
-
-
-
+</div>
