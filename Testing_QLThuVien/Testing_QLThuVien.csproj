@@ -366,6 +366,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\QLSach\Sach.cshtml" />
+    <Content Include="Views\QLSach\ThemSach.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201709201018003_Initial.resx">
