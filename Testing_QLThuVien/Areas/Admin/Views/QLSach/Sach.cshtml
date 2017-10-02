@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Sach";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    int stt = 1;
 }
 
 
@@ -22,17 +23,18 @@
                 <table id="mytable" class="table table-striped table-bordered">
                     <thead>
                         <tr>
+                            <th>STT</th>
                             <th>
-                                Nhà Xuất Bản
-                            </th>
-                            <th>
-                                Tác Giả
+                                Tên Sách
                             </th>
                             <th>
                                 Thể Loại
                             </th>
                             <th>
-                                Tên Sách
+                                Tác Giả
+                            </th>
+                            <th>
+                                Nhà Xuất Bản
                             </th>
                             <th>
                                 Hình Ảnh
@@ -40,19 +42,18 @@
                             <th>
                                 Năm Xuất Bản
                             </th>
-                            @*<th>
-                                    @Html.DisplayNameFor(model => model.SoLuong)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.SoLuongTon)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.TriGia)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.TinhTrang)
-                                </th>
-                                <th></th>*@
+                            <th>
+                                Số Lượng
+                            </th>
+                            <th>
+                                Số Lượng Tồn
+                            </th>
+                            <th>
+                                Trị Giá
+                            </th>
+                            <th>
+                                Tình Trạng
+                            </th>
                         </tr>
                     </thead>
 
@@ -66,6 +67,11 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                         }
                         else
@@ -73,17 +79,18 @@
                             foreach (var item in Model)
                             {
                                 <tr>
+                                    <td style="text-align:center">@stt</td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.NhaXuatBan.TenNhaXuatBan)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.TacGia.TenTacGia)
+                                        @Html.DisplayFor(modelItem => item.TenSach)
                                     </td>
                                     <td>
                                         @Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.TenSach)
+                                        @Html.DisplayFor(modelItem => item.TacGia.TenTacGia)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NhaXuatBan.TenNhaXuatBan)
                                     </td>
                                     <td>
                                         @Html.DisplayFor(modelItem => item.HinhAnh)
@@ -91,19 +98,20 @@
                                     <td>
                                         @Html.DisplayFor(modelItem => item.NamXuatBan)
                                     </td>
-                                    @*<td>
-                                            @Html.DisplayFor(modelItem => item.SoLuong)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.SoLuongTon)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.TriGia)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.TinhTrang)
-                                        </td>*@
+                                    <td style="text-align:center">
+                                        @Html.DisplayFor(modelItem => item.SoLuong)
+                                    </td>
+                                    <td style="text-align:center">
+                                        @Html.DisplayFor(modelItem => item.SoLuongTon)
+                                    </td>
+                                    <td style="text-align:center">
+                                        @Html.DisplayFor(modelItem => item.TriGia)
+                                    </td>
+                                    <td style="text-align:center">
+                                        @Html.DisplayFor(modelItem => item.TinhTrang)
+                                    </td>
                                 </tr>
+                                stt++;
                             }
                         }
                     </tbody>

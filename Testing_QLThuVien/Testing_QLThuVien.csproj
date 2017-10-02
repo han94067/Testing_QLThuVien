@@ -178,9 +178,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201709201018003_Initial.cs" />
-    <Compile Include="Migrations\201709201018003_Initial.Designer.cs">
-      <DependentUpon>201709201018003_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201710020441163_Initial.cs" />
+    <Compile Include="Migrations\201710020441163_Initial.Designer.cs">
+      <DependentUpon>201710020441163_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ChucVu.cs" />
@@ -193,7 +193,6 @@
     <Compile Include="Models\PhieuTienPhat.cs" />
     <Compile Include="Models\QLThuVien.cs" />
     <Compile Include="Models\Sach.cs" />
-    <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Models\TacGia.cs" />
     <Compile Include="Models\TheLoai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -459,17 +458,17 @@
     <Content Include="Areas\Admin\Views\DocGia\ThemDocGia.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201709201018003_Initial.resx">
-      <DependentUpon>201709201018003_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710020441163_Initial.resx">
+      <DependentUpon>201710020441163_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -21,7 +21,6 @@ namespace Testing_QLThuVien.Models
         public virtual DbSet<PhieuNhapSach> PhieuNhapSaches { get; set; }
         public virtual DbSet<PhieuTienPhat> PhieuTienPhats { get; set; }
         public virtual DbSet<Sach> Saches { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TacGia> TacGias { get; set; }
         public virtual DbSet<TheLoai> TheLoais { get; set; }
 
@@ -34,8 +33,7 @@ namespace Testing_QLThuVien.Models
 
             modelBuilder.Entity<ChucVu>()
                 .Property(e => e.TenChucVu)
-                .IsFixedLength()
-                .IsUnicode(false);
+                .IsFixedLength();
 
             modelBuilder.Entity<CTMuonTra>()
                 .Property(e => e.MaSach)
@@ -60,14 +58,6 @@ namespace Testing_QLThuVien.Models
             modelBuilder.Entity<DocGia>()
                 .Property(e => e.MaDocGia)
                 .IsFixedLength()
-                .IsUnicode(false);
-
-            modelBuilder.Entity<DocGia>()
-                .Property(e => e.TenDocGia)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<DocGia>()
-                .Property(e => e.DiaChi)
                 .IsUnicode(false);
 
             modelBuilder.Entity<DocGia>()
@@ -100,10 +90,6 @@ namespace Testing_QLThuVien.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<NhanVien>()
-                .Property(e => e.TenNV)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<NhanVien>()
                 .Property(e => e.SDT)
                 .IsFixedLength()
                 .IsUnicode(false);
@@ -125,10 +111,6 @@ namespace Testing_QLThuVien.Models
             modelBuilder.Entity<NhaXuatBan>()
                 .Property(e => e.MaNhaXuatBan)
                 .IsFixedLength()
-                .IsUnicode(false);
-
-            modelBuilder.Entity<NhaXuatBan>()
-                .Property(e => e.TenNhaXuatBan)
                 .IsUnicode(false);
 
             modelBuilder.Entity<PhieuNhapSach>()
@@ -177,10 +159,6 @@ namespace Testing_QLThuVien.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Sach>()
-                .Property(e => e.TenSach)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Sach>()
                 .Property(e => e.HinhAnh)
                 .IsFixedLength()
                 .IsUnicode(false);
@@ -200,17 +178,9 @@ namespace Testing_QLThuVien.Models
                 .IsFixedLength()
                 .IsUnicode(false);
 
-            modelBuilder.Entity<TacGia>()
-                .Property(e => e.TenTacGia)
-                .IsUnicode(false);
-
             modelBuilder.Entity<TheLoai>()
                 .Property(e => e.MaTheLoai)
                 .IsFixedLength()
-                .IsUnicode(false);
-
-            modelBuilder.Entity<TheLoai>()
-                .Property(e => e.TenTheLoai)
                 .IsUnicode(false);
         }
     }

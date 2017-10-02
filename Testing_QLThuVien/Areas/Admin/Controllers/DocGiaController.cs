@@ -22,5 +22,18 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
         {
             return PartialView();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ThemDocGia([Bind(Include = "MaDocGia, TenDocGia, DiaChi, NgaySinh, SDT, Email, CMND, NgayLap, TinhTrang, TongTienPhat")] DocGia dg)
+        {
+            dg.MaDocGia = "";
+            dg.TinhTrang = 1;
+            dg.TongTienPhat = 0;
+            dg.NgayLap = DateTime.Today;
+            db.DocGias.Add(dg);
+            db.SaveChanges();
+            return RedirectToAction("DSDocGia");
+        }
     }
 }

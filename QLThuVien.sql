@@ -1,5 +1,5 @@
-Create Database QLThuVien
 
+Create Database QLThuVien
 go
 Use QLThuVien
 
@@ -7,7 +7,7 @@ go
 Create Table ChucVu
 (
 	MaChucVu	char(10)	primary key,
-	TenChucVu	char(15),
+	TenChucVu	nchar(15),
 );
 
 go
@@ -15,7 +15,7 @@ Create Table NhanVien
 (
 	MaNhanVien	char(10)	primary key,
 	MaChucVu	char(10),
-	TenNV		varchar(50),
+	TenNV		nvarchar(50),
 	GioiTinh	int,
 	SDT			char(15),
 	Email		varchar(30),
@@ -29,21 +29,21 @@ go
 Create Table TacGia
 (
 	MaTacGia	char(10)	primary key,
-	TenTacGia	varchar(50),
+	TenTacGia	nvarchar(50),
 );
 
 go
 Create Table NhaXuatBan
 (
 	MaNhaXuatBan	char(10)	primary key,
-	TenNhaXuatBan	varchar(50),
+	TenNhaXuatBan	nvarchar(50),
 );
 
 go
 Create Table TheLoai
 (
 	MaTheLoai	char(10)	primary key,
-	TenTheLoai	varchar(30),
+	TenTheLoai	nvarchar(30),
 );
 
 go
@@ -53,7 +53,7 @@ Create Table Sach
 	MaTacGia		char(10),
 	MaNhaXuatBan	char(10),
 	MaTheLoai		char(10),
-	TenSach			varchar(50),
+	TenSach			nvarchar(50),
 	HinhAnh			char(15),
 	NamXuatBan		int,
 	SoLuong			int,
@@ -69,8 +69,8 @@ go
 Create Table DocGia
 (
 	MaDocGia		char(10)	primary key,
-	TenDocGia		varchar(50),
-	DiaChi			varchar(50),
+	TenDocGia		nvarchar(50),
+	DiaChi			nvarchar(50),
 	NgaySinh		date,
 	SDT				char(15),
 	Email			varchar(30),

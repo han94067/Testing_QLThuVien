@@ -192,4 +192,3 @@ E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.Migrat
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csproj.GenerateResource.Cache
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.pdb
-E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csprojResolveAssemblyReference.cache
