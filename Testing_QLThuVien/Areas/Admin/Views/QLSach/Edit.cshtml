@@ -1,0 +1,133 @@
+﻿@model Testing_QLThuVien.Models.Sach
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Thông Tin Sách</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-horizontal form-label-left" novalidate">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.IDSach)
+            @Html.HiddenFor(model => model.HinhAnh)
+            @Html.HiddenFor(model => model.SoLuong)
+            @Html.HiddenFor(model => model.SoLuongTon)
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Mã Sách</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @*@Html.EditorFor(model => model.MaSach, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly" } })*@
+                    <input class="form-control" disabled readonly value="@Model.IDSach" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Tên Sách</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @Html.EditorFor(model => model.TenSach, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TenSach, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Tên Tác Giả</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @*@Html.EditorFor(model => model.TacGia.TenTacGia, new { htmlAttributes = new { @class = "form-control" } })*@
+                    <input class="form-control" value="@Model.TacGia.TenTacGia" name="TenTacGia" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Tên Nhà Xuất Bản</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @*@Html.EditorFor(model => model.NhaXuatBan.TenNhaXuatBan, new { htmlAttributes = new { @class = "form-control" } })*@
+                    <input class="form-control" value="@Model.NhaXuatBan.TenNhaXuatBan" name="NhaXuatBan" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Thể Loại</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @Html.DropDownList("IDTheLoai", null, htmlAttributes: new { @class = "form-control" })
+                </div>
+            </div>
+
+            @*<div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Hình Ảnh</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        @Html.EditorFor(model => model.HinhAnh, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.HinhAnh, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Năm Xuất Bản</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @Html.EditorFor(model => model.NamXuatBan, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NamXuatBan, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Số Lượng</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @*@Html.EditorFor(model => model.MaSach, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly" } })*@
+                    <input class="form-control" disabled readonly value="@Model.SoLuong" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Số Lượng Tồn</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @*@Html.EditorFor(model => model.MaSach, new { htmlAttributes = new { @class = "form-control", disabled = "disabled", @readonly = "readonly" } })*@
+                    <input class="form-control" disabled readonly value="@Model.SoLuongTon" />
+                </div>
+            </div>
+            @*<div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Số Lượng</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        @Html.EditorFor(model => model.SoLuong, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SoLuong, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+
+            @*<div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Số Lượng Tồn</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        @Html.EditorFor(model => model.SoLuongTon, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SoLuongTon, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Trị Giá</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @Html.EditorFor(model => model.TriGia, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TriGia, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Tình Trạng</label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @Html.EditorFor(model => model.TinhTrang, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TinhTrang, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+        <input type="button" class="btn btn-danger" value="Xóa" onclick="createModalsm('@Url.Action("Delete", "QLSach", new { ma = Model.IDSach })')" />
+        <input type="submit" class="btn btn-primary" value="Lưu" />
+    </div>
+}
+

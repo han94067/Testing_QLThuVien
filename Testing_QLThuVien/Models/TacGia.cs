@@ -16,8 +16,8 @@ namespace Testing_QLThuVien.Models
         }
 
         [Key]
-        [StringLength(10)]
-        public string MaTacGia { get; set; }
+        [StringLength(5)]
+        public string IDTacGia { get; set; }
 
         [StringLength(50)]
         public string TenTacGia { get; set; }

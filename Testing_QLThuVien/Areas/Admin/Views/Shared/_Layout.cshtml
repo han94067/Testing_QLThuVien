@@ -57,11 +57,18 @@
                                     <a><i class="fa fa-home"></i> Quản Lý Sách <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="@Url.Action("Sach", "QLSach")">Sách</a></li>
+                                        <li><a href="@Url.Action("Index", "TacGia")">Tác Giả</a></li>
+                                        <li><a href="@Url.Action("Index", "TheLoai")">Thể Loại</a></li>
+                                        <li><a href="@Url.Action("Index", "NhaXuatBan")">Nhà Xuất Bản</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a><i class="fa fa-edit"></i> Chức Năng <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
+                                        <li><a href="@Url.Action("SachDaDat", "MuonSach")">Sách Đã Đặt 1</a></li>
+                                        <li><a href="@Url.Action("SachDangMuon", "MuonSach")">Sách Đang Mượn 2</a></li>
+                                        <li><a href="@Url.Action("SachDaTra", "MuonSach")">Sách Đã Trả 3</a></li>
+                                        <li><a href="@Url.Action("SachQuaHan", "MuonSach")">Sách Quá Hạn 4</a></li>
                                         <li><a href="form.html">Lập Phiếu Mượn</a></li>
                                         <li><a href="form_advanced.html">Lập Phiếu Phạt</a></li>
                                         <li><a href="form_validation.html">Lập Phiếu Nhập Sách</a></li>
@@ -139,7 +146,7 @@
 
             <footer>
                 <div class="pull-right">
-                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+                    Sản Phẩm Của Nhóm ...
                 </div>
                 <div class="clearfix"></div>
             </footer>
@@ -209,6 +216,10 @@
     <script src="~/Areas/Admin/Scripts/jquery.inputmask.bundle.min.js"></script>
     <script src="~/Areas/Admin/Scripts/jquery.knob.min.js"></script>*@
 
+
+
+
+
     <script type="text/javascript">
         $(document).ready(function () {
             $('#mytable').DataTable({
@@ -216,35 +227,6 @@
                     "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Vietnamese.json"
                 }
             });
-        });
-
-        $('#myDatepicker').datetimepicker();
-
-        $('#myDatepicker2').datetimepicker({
-            format: 'DD.MM.YYYY'
-        });
-
-        $('#myDatepicker3').datetimepicker({
-            format: 'hh:mm A'
-        });
-
-        $('#myDatepicker4').datetimepicker({
-            ignoreReadonly: true,
-            allowInputToggle: true
-        });
-
-        $('#datetimepicker6').datetimepicker();
-
-        $('#datetimepicker7').datetimepicker({
-            useCurrent: false
-        });
-
-        $("#datetimepicker6").on("dp.change", function (e) {
-            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-        });
-
-        $("#datetimepicker7").on("dp.change", function (e) {
-            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
         });
     </script>
 

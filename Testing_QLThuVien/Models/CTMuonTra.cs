@@ -10,41 +10,41 @@ namespace Testing_QLThuVien.Models
     public partial class CTMuonTra
     {
         [Key]
-        [Column(Order = 0, TypeName = "date")]
-        public DateTime NgayMuon { get; set; }
+        [Column(Order = 0)]
+        [StringLength(5)]
+        public string STT { get; set; }
 
         [Key]
         [Column(Order = 1)]
-        [StringLength(10)]
-        public string MaSach { get; set; }
+        [StringLength(5)]
+        public string IDSach { get; set; }
 
         [Key]
         [Column(Order = 2)]
-        [StringLength(10)]
-        public string MaDocGia { get; set; }
+        [StringLength(5)]
+        public string IDDocGia { get; set; }
 
-        [Column(TypeName = "date")]
+        public DateTime? NgayMuon { get; set; }
+
         public DateTime? NgayTraQuyDinh { get; set; }
 
-        [Column(TypeName = "date")]
         public DateTime? NgayTraThucTe { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? NgayQuaHan { get; set; }
+        public int? NgayQuaHan { get; set; }
+
+        public int? TinhTrangMuon { get; set; }
 
         public int? SoLuongThue { get; set; }
 
-        public int? TriGia { get; set; }
+        public decimal? TriGia { get; set; }
 
-        public int? TienCoc { get; set; }
+        public decimal? TienCoc { get; set; }
 
-        public int? TienThue { get; set; }
+        public decimal? TienThue { get; set; }
 
-        public int? TienPhat { get; set; }
+        public decimal? TienPhat { get; set; }
 
-        public int? TongTien { get; set; }
-
-        public int? TinhTrang { get; set; }
+        public decimal? TongTien { get; set; }
 
         public virtual DocGia DocGia { get; set; }
 

@@ -117,7 +117,7 @@ Create Table CTMuonTra
 	MaDocGia		char(10),
 	NgayTraQuyDinh	date,
 	NgayTraThucTe	date,
-	NgayQuaHan		date,
+	SoNgayQuaHan	int,
 	SoLuongThue		int,
 	TriGia			int,
 	TienCoc			int,

@@ -12,26 +12,23 @@ namespace Testing_QLThuVien.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PhieuNhapSach()
         {
-            CTPhieuNhaps = new HashSet<CTPhieuNhap>();
+            ChiTietPhieuNhapSaches = new HashSet<ChiTietPhieuNhapSach>();
         }
 
         [Key]
-        [StringLength(10)]
-        public string MaPhieuNhapSach { get; set; }
+        [StringLength(5)]
+        public string IDPhieuNhapSach { get; set; }
 
-        [StringLength(10)]
-        public string MaNhanVien { get; set; }
+        [StringLength(5)]
+        public string IDNhanVien { get; set; }
 
-        [Column(TypeName = "date")]
         public DateTime? NgayNhap { get; set; }
 
         public int? TongSoLuong { get; set; }
 
-        public int? TongDonGia { get; set; }
+        public decimal? TongDongia { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CTPhieuNhap> CTPhieuNhaps { get; set; }
-
-        public virtual NhanVien NhanVien { get; set; }
+        public virtual ICollection<ChiTietPhieuNhapSach> ChiTietPhieuNhapSaches { get; set; }
     }
 }

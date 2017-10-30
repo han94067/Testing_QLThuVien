@@ -169,28 +169,33 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\QLSachController.cs" />
-    <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\DocGiaController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MuonSachController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NhaXuatBanController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QLSachController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TacGiaController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TheLoaiController.cs" />
+    <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710020441163_Initial.cs" />
-    <Compile Include="Migrations\201710020441163_Initial.Designer.cs">
-      <DependentUpon>201710020441163_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201710301041254_init.cs" />
+    <Compile Include="Migrations\201710301041254_init.Designer.cs">
+      <DependentUpon>201710301041254_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\BangRangBuoc.cs" />
+    <Compile Include="Models\ChiTietPhieuNhapSach.cs" />
     <Compile Include="Models\ChucVu.cs" />
     <Compile Include="Models\CTMuonTra.cs" />
-    <Compile Include="Models\CTPhieuNhap.cs" />
     <Compile Include="Models\DocGia.cs" />
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\NhaXuatBan.cs" />
     <Compile Include="Models\PhieuNhapSach.cs" />
-    <Compile Include="Models\PhieuTienPhat.cs" />
+    <Compile Include="Models\PhieuThuTienPhat.cs" />
     <Compile Include="Models\QLThuVien.cs" />
     <Compile Include="Models\Sach.cs" />
     <Compile Include="Models\TacGia.cs" />
@@ -390,6 +395,23 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\User\Views\web.config" />
     <Content Include="Areas\Admin\Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\DocGia\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\DocGia\DSDocGia.cshtml" />
+    <Content Include="Areas\Admin\Views\DocGia\ThemDocGia.cshtml" />
+    <Content Include="Areas\Admin\Views\DocGia\ThongTin.cshtml" />
+    <Content Include="Areas\Admin\Views\Login\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\MuonSach\SachDaDat.cshtml" />
+    <Content Include="Areas\Admin\Views\MuonSach\SachDangMuon.cshtml" />
+    <Content Include="Areas\Admin\Views\MuonSach\SachDaTra.cshtml" />
+    <Content Include="Areas\Admin\Views\MuonSach\SachQuaHan.cshtml" />
+    <Content Include="Areas\Admin\Views\NhaXuatBan\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\QLSach\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\QLSach\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\QLSach\Sach.cshtml" />
+    <Content Include="Areas\Admin\Views\QLSach\ThemSach.cshtml" />
+    <Content Include="Areas\Admin\Views\TacGia\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TheLoai\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\buttons.bootstrap.min.js" />
     <Content Include="Scripts\buttons.flash.min.js" />
@@ -451,11 +473,6 @@
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\QLSach\Sach.cshtml" />
-    <Content Include="Areas\Admin\Views\DocGia\DSDocGia.cshtml" />
-    <Content Include="Areas\Admin\Views\Login\Login.cshtml" />
-    <Content Include="Areas\Admin\Views\QLSach\ThemSach.cshtml" />
-    <Content Include="Areas\Admin\Views\DocGia\ThemDocGia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -466,8 +483,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710020441163_Initial.resx">
-      <DependentUpon>201710020441163_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710301041254_init.resx">
+      <DependentUpon>201710301041254_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

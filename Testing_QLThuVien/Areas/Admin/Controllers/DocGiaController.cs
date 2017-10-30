@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Testing_QLThuVien.Models;
+using System.Data;
+using System.Data.Entity;
 
 namespace Testing_QLThuVien.Areas.Admin.Controllers
 {
@@ -25,13 +27,56 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ThemDocGia([Bind(Include = "MaDocGia, TenDocGia, DiaChi, NgaySinh, SDT, Email, CMND, NgayLap, TinhTrang, TongTienPhat")] DocGia dg)
+        public ActionResult ThemDocGia([Bind(Include = "IDDocGia, TenDocGia, DiaChi, NgaySinh, SoDienThoai, Email, CMND, NgayLap, TinhTrang, TongTienPhat")] DocGia dg)
         {
-            dg.MaDocGia = "";
+            dg.IDDocGia = "";
             dg.TinhTrang = 1;
             dg.TongTienPhat = 0;
             dg.NgayLap = DateTime.Today;
             db.DocGias.Add(dg);
+            db.SaveChanges();
+            return RedirectToAction("DSDocGia");
+        }
+
+        [HttpGet]
+        public ActionResult ThongTin(string ma)
+        {
+            DocGia dg = db.DocGias.Find(ma);
+            if (dg == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            //ViewBag.MaTheLoai = new SelectList(db.TheLoais, "MaTheLoai", "TenTheLoai", Book.MaTheLoai);
+            return PartialView(dg);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ThongTin([Bind(Include = "IDDocGia, TenDocGia, DiaChi, NgaySinh, SoDienThoai, Email, CMND, NgayLap, TinhTrang, TongTienPhat")] DocGia dg)
+        {
+            db.Entry(dg).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("DSDocGia");
+        }
+
+        [HttpGet]
+        public ActionResult Delete(string ma)
+        {
+            DocGia dg = db.DocGias.Find(ma);
+            if (dg == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return PartialView(dg);
+        }
+
+        [HttpPost]
+        public ActionResult Delete([Bind(Include = "IDDocGia, TenDocGia, DiaChi, NgaySinh, SoDienThoai, Email, CMND, NgayLap, TinhTrang, TongTienPhat")] DocGia dg)
+        {
+            DocGia s = db.DocGias.Find(dg.IDDocGia);
+            db.DocGias.Remove(s);
             db.SaveChanges();
             return RedirectToAction("DSDocGia");
         }

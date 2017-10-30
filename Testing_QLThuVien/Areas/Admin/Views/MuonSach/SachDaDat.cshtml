@@ -1,0 +1,126 @@
+﻿@model IEnumerable<Testing_QLThuVien.Models.CTMuonTra>
+
+@{
+    ViewBag.Title = "SachDaDat";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+
+            <div class="x_title">
+                <h2>Danh Sách Sách Đã Được Đặt</h2>
+                @*<div class="nav navbar-right panel_toolbox">
+                    <input type="button" class="btn btn-primary" value="Thêm Sách" onclick="createModallg('@Url.Action("ThemSach", "QLSach")')" />
+                </div>*@
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <table id="mytable" class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DocGia.SoDienThoai)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Sach.IDTheLoai)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.NgayMuon)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.NgayTraQuyDinh)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.NgayTraThucTe)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.NgayQuaHan)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.TinhTrangMuon)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.SoLuongThue)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.TriGia)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.TienCoc)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.TienThue)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.TienPhat)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.TongTien)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if(Model.Count() == 0)
+                        {
+                            <tr>
+                                <td colspan="14" style="text-align:center">Không có dữ liệu.</td>
+                            </tr>
+                        }
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DocGia.SoDienThoai)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Sach.IDTheLoai)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NgayMuon)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NgayTraQuyDinh)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NgayTraThucTe)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NgayQuaHan)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TinhTrangMuon)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.SoLuongThue)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TriGia)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TienCoc)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TienThue)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TienPhat)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TongTien)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

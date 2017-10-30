@@ -12,27 +12,28 @@ namespace Testing_QLThuVien.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Sach()
         {
+            ChiTietPhieuNhapSaches = new HashSet<ChiTietPhieuNhapSach>();
             CTMuonTras = new HashSet<CTMuonTra>();
-            CTPhieuNhaps = new HashSet<CTPhieuNhap>();
         }
 
         [Key]
-        [StringLength(10)]
-        public string MaSach { get; set; }
+        [StringLength(5)]
+        public string IDSach { get; set; }
 
-        [StringLength(10)]
-        public string MaTacGia { get; set; }
+        [Required]
+        [StringLength(5)]
+        public string IDTheLoai { get; set; }
 
-        [StringLength(10)]
-        public string MaNhaXuatBan { get; set; }
+        [StringLength(5)]
+        public string IDTacGia { get; set; }
 
-        [StringLength(10)]
-        public string MaTheLoai { get; set; }
+        [StringLength(5)]
+        public string IDNhaXuatBan { get; set; }
 
         [StringLength(50)]
         public string TenSach { get; set; }
 
-        [StringLength(15)]
+        [StringLength(200)]
         public string HinhAnh { get; set; }
 
         public int? NamXuatBan { get; set; }
@@ -41,15 +42,17 @@ namespace Testing_QLThuVien.Models
 
         public int? SoLuongTon { get; set; }
 
-        public int? TriGia { get; set; }
+        public decimal? TriGia { get; set; }
 
         public int? TinhTrang { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CTMuonTra> CTMuonTras { get; set; }
+        public string MoTa { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CTPhieuNhap> CTPhieuNhaps { get; set; }
+        public virtual ICollection<ChiTietPhieuNhapSach> ChiTietPhieuNhapSaches { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CTMuonTra> CTMuonTras { get; set; }
 
         public virtual NhaXuatBan NhaXuatBan { get; set; }
 

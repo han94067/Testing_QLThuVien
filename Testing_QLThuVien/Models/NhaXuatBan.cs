@@ -16,8 +16,8 @@ namespace Testing_QLThuVien.Models
         }
 
         [Key]
-        [StringLength(10)]
-        public string MaNhaXuatBan { get; set; }
+        [StringLength(5)]
+        public string IDNhaXuatBan { get; set; }
 
         [StringLength(50)]
         public string TenNhaXuatBan { get; set; }

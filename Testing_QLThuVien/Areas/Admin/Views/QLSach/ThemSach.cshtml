@@ -1,9 +1,9 @@
 ﻿@model Testing_QLThuVien.Models.Sach
 
-
 @using (Html.BeginForm("ThemSach", "QLSach"))
 {
     @Html.AntiForgeryToken()
+
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">
             <span aria-hidden="true">×</span>
@@ -12,6 +12,8 @@
     </div>
     <div class="modal-body">
         <div class="form-horizontal form-label-left" novalidate">
+
+
             <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
                     Tên Sách <span class="required">*</span>
@@ -19,6 +21,30 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     @Html.EditorFor(model => model.TenSach, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.TenSach, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                    Tên Tác Giả <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" name="TenTacGia" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                    Tên Nhà Xuất Bản <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" name="NhaXuatBan" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                    Thể Loại <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @Html.DropDownList("IDTheLoai", null, htmlAttributes: new { @class = "form-control" })
                 </div>
             </div>
             <div class="form-group">
@@ -32,20 +58,20 @@
             </div>
             <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">
-                    Số Lượng <span class="required">*</span>
-                </label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    @Html.EditorFor(model => model.SoLuong, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.SoLuong, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">
                     Trị Giá <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     @Html.EditorFor(model => model.TriGia, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.TriGia, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                    Mô Tả <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @Html.EditorFor(model => model.MoTa, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.MoTa, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>

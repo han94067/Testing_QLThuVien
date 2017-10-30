@@ -16,10 +16,10 @@ namespace Testing_QLThuVien.Models
         }
 
         [Key]
-        [StringLength(10)]
-        public string MaTheLoai { get; set; }
+        [StringLength(5)]
+        public string IDTheLoai { get; set; }
 
-        [StringLength(30)]
+        [StringLength(50)]
         public string TenTheLoai { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

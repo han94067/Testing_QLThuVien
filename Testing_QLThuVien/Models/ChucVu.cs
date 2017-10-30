@@ -16,10 +16,10 @@ namespace Testing_QLThuVien.Models
         }
 
         [Key]
-        [StringLength(10)]
-        public string MaChucVu { get; set; }
+        [StringLength(5)]
+        public string IDChucVu { get; set; }
 
-        [StringLength(15)]
+        [StringLength(20)]
         public string TenChucVu { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
