@@ -412,6 +412,10 @@
     <Content Include="Areas\Admin\Views\QLSach\ThemSach.cshtml" />
     <Content Include="Areas\Admin\Views\TacGia\Index.cshtml" />
     <Content Include="Areas\Admin\Views\TheLoai\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TheLoai\ThemTheLoai.cshtml" />
+    <Content Include="Areas\Admin\Views\MuonSach\ThemDangMuon.cshtml" />
+    <Content Include="Areas\Admin\Views\MuonSach\ChonDocGia.cshtml" />
+    <Content Include="Areas\Admin\Views\MuonSach\ChonSach.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\buttons.bootstrap.min.js" />
     <Content Include="Scripts\buttons.flash.min.js" />

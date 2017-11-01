@@ -18,5 +18,20 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
         {
             return View(db.TheLoais.ToList());
         }
+
+        [HttpGet]
+        public ActionResult ThemTheLoai()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public ActionResult ThemTheLoai([Bind(Include = "IDTheLoai, TenTheLoai")] TheLoai tl)
+        {
+            tl.IDTheLoai = "";
+            db.TheLoais.Add(tl);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "SachDaDat";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    int stt = 1;
 }
 
 <div class="row">
@@ -20,44 +21,27 @@
                 <table id="mytable" class="table table-striped table-bordered">
                     <thead>
                         <tr>
+                            <th>STT</th>
                             <th>
-                                @Html.DisplayNameFor(model => model.DocGia.SoDienThoai)
+                                Tên Độc Giả
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.Sach.IDTheLoai)
+                                Tên Sách
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.NgayMuon)
+                                Số Lượng
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.NgayTraQuyDinh)
+                                Ngày Mượn
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.NgayTraThucTe)
+                                Ngày Trả
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.NgayQuaHan)
+                                Số Ngày Quá Hạn
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.TinhTrangMuon)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.SoLuongThue)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.TriGia)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.TienCoc)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.TienThue)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.TienPhat)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.TongTien)
+                                Tổng Tiền
                             </th>
                             <th></th>
                         </tr>
@@ -66,55 +50,37 @@
                         @if (Model.Count() == 0)
                         {
                             <tr>
-                                <td colspan="14" style="text-align:center">Không có dữ liệu.</td>
+                                <td colspan="9" style="text-align:center">Không có dữ liệu.</td>
                             </tr>
                         }
                         @foreach (var item in Model)
                         {
                             <tr>
+                                <td style="text-align:center">@stt</td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.DocGia.SoDienThoai)
+                                    @Html.DisplayFor(modelItem => item.DocGia.TenDocGia)
                                 </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Sach.IDTheLoai)
+                                <td style="text-align:center">
+                                    @Html.DisplayFor(modelItem => item.Sach.TenSach)
                                 </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.NgayMuon)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.NgayTraQuyDinh)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.NgayTraThucTe)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.NgayQuaHan)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.TinhTrangMuon)
-                                </td>
-                                <td>
+                                <td style="text-align:center">
                                     @Html.DisplayFor(modelItem => item.SoLuongThue)
                                 </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.TriGia)
+                                <td style="text-align:center">
+                                    @String.Format("{0:dd/MM/yyyy}", item.NgayMuon)
                                 </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.TienCoc)
+                                <td style="text-align:center">
+                                    @String.Format("{0:dd/MM/yyyy}", item.NgayTraThucTe)
                                 </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.TienThue)
+                                <td style="text-align:center">
+                                    @Html.DisplayFor(modelItem => item.NgayQuaHan)
                                 </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.TienPhat)
-                                </td>
-                                <td>
+                                <td style="text-align:center">
                                     @Html.DisplayFor(modelItem => item.TongTien)
                                 </td>
-                                <td>
-                                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                                <td style="text-align:center">
+
+
                                 </td>
                             </tr>
                         }

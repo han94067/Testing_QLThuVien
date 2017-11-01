@@ -12,9 +12,9 @@
 
             <div class="x_title">
                 <h2>Thể Loại Sách</h2>
-                @*<div class="nav navbar-right panel_toolbox">
-                        <input type="button" class="btn btn-primary" value="Thêm Sách" onclick="createModallg('@Url.Action("ThemSach", "QLSach")')" />
-                    </div>*@
+                <div class="nav navbar-right panel_toolbox">
+                        <input type="button" class="btn btn-primary" value="Thêm Thể Loại" onclick="createModalsm('@Url.Action("ThemTheLoai", "TheLoai")')" />
+                    </div>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
@@ -55,5 +55,28 @@
     </div>
 </div>
 
+<div class="modal fade bs-example-modal-lg" id="showModallg" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="modelContentlg">
+        </div>
+    </div>
+</div>
 
+<div class="modal fade bs-example-modal-sm1" id="showModalsm" tabindex="-1">
+    <div class="modal-dialog modal-sm1">
+        <div class="modal-content" id="modelContentsm">
+        </div>
+    </div>
+</div>
+
+<script>
+    function createModallg(url){
+        $('#modelContentlg').load(url);
+        $('#showModallg').modal('show');
+    }
+    function createModalsm(url) {
+        $('#modelContentsm').load(url);
+        $('#showModalsm').modal('show');
+    }
+</script>
 

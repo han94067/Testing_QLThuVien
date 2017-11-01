@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "SachDaDat";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    int stt = 1;
 }
 
 <div class="row">
@@ -11,110 +12,82 @@
 
             <div class="x_title">
                 <h2>Danh Sách Sách Đã Được Đặt</h2>
-                @*<div class="nav navbar-right panel_toolbox">
-                        <input type="button" class="btn btn-primary" value="Thêm Sách" onclick="createModallg('@Url.Action("ThemSach", "QLSach")')" />
-                    </div>*@
+                <div class="nav navbar-right panel_toolbox">
+                        <input type="button" class="btn btn-primary" value="Thêm Mượn" onclick="createModallg('@Url.Action("ThemDangMuon", "MuonSach")')" />
+                    </div>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
                 <table id="mytable" class="table table-striped table-bordered">
                     <thead>
                         <tr>
-                            <th>
-                                @Html.DisplayNameFor(model => model.DocGia.SoDienThoai)
+                            <th style="text-align:center">STT</th>
+                            <th style="text-align:center">
+                                Tên Độc Giả
                             </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Sach.IDTheLoai)
+                            <th style="text-align:center">
+                                Tên Sách
                             </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.NgayMuon)
+                            <th style="text-align:center">
+                                Ngày Mượn
                             </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.NgayTraQuyDinh)
+                            <th style="text-align:center">
+                                Ngày Trả Quy Định
                             </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.NgayTraThucTe)
+                            <th style="text-align:center">
+                                Số Lượng
                             </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.NgayQuaHan)
+                            <th style="text-align:center">
+                                Tiền Cọc
                             </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.TinhTrangMuon)
+                            <th style="text-align:center">
+                                Tiền Thuê
                             </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.SoLuongThue)
+                            <th style="text-align:center">
+                                Tổng Tiền
                             </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.TriGia)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.TienCoc)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.TienThue)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.TienPhat)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.TongTien)
-                            </th>
-                            <th></th>
+                            <th style="text-align:center">Chức Năng</th>
                         </tr>
                     </thead>
                     <tbody>
                         @if (Model.Count() == 0)
                         {
                             <tr>
-                                <td colspan="14" style="text-align:center">Không có dữ liệu.</td>
+                                <td colspan="10" style="text-align:center">Không có dữ liệu.</td>
                             </tr>
                         }
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.DocGia.SoDienThoai)
+                                <td style="text-align:center">
+                                    @stt
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.Sach.IDTheLoai)
+                                    @Html.DisplayFor(modelItem => item.DocGia.TenDocGia)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.NgayMuon)
+                                    @Html.DisplayFor(modelItem => item.Sach.TenSach)
                                 </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.NgayTraQuyDinh)
+                                <td style="text-align:center">
+                                    @String.Format("{0:dd/MM/yyyy}", item.NgayMuon)
                                 </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.NgayTraThucTe)
+                                <td style="text-align:center">
+                                    @String.Format("{0:dd/MM/yyyy}", item.NgayTraQuyDinh)
                                 </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.NgayQuaHan)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.TinhTrangMuon)
-                                </td>
-                                <td>
+                                <td style="text-align:center">
                                     @Html.DisplayFor(modelItem => item.SoLuongThue)
                                 </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.TriGia)
-                                </td>
-                                <td>
+                                <td style="text-align:center">
                                     @Html.DisplayFor(modelItem => item.TienCoc)
                                 </td>
-                                <td>
+                                <td style="text-align:center">
                                     @Html.DisplayFor(modelItem => item.TienThue)
                                 </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.TienPhat)
-                                </td>
-                                <td>
+                                <td style="text-align:center">
                                     @Html.DisplayFor(modelItem => item.TongTien)
-                                </td>
-                                <td>
-                                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                                </td>                              
+                                <td style="text-align:center">
+                                    <input type="button" class="btn btn-round btn-info btn-xs" value="Đã Trả" onclick="location.href='@Url.Action("DaTraSach", "MuonSach", new { stt = item.STT, iddg = item.IDDocGia, idsach = item.IDSach })'" />
                                 </td>
                             </tr>
                         }
@@ -124,3 +97,43 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade bs-example-modal-lg" id="showModallg" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="modelContentlg">
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" id="showModallg1" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="modelContentlg1">
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="showModalsm" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content" id="modelContentsm">
+        </div>
+    </div>
+</div>
+
+<script>
+    function createModallg(url){
+        $('#modelContentlg').load(url);
+        $('#showModallg').modal('show');
+    }
+    function createModallg1(url){
+        $('#modelContentlg1').load(url);
+        $('#showModallg1').modal('show');
+    }
+    function createModalsm(url) {
+        $('#modelContentsm').load(url);
+        $('#showModalsm').modal('show');
+    }
+    function ChonDG(url) {
+        $('#showModallg1').modal('hide');
+        $('#modelContentlg').load(url);
+    }
+</script>
