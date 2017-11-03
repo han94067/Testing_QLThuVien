@@ -173,6 +173,7 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\MuonSachController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NhapSachController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhaXuatBanController.cs" />
     <Compile Include="Areas\Admin\Controllers\QLSachController.cs" />
     <Compile Include="Areas\Admin\Controllers\TacGiaController.cs" />
@@ -395,7 +396,6 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\User\Views\web.config" />
     <Content Include="Areas\Admin\Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\DocGia\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\DocGia\DSDocGia.cshtml" />
     <Content Include="Areas\Admin\Views\DocGia\ThemDocGia.cshtml" />
@@ -416,6 +416,13 @@
     <Content Include="Areas\Admin\Views\MuonSach\ThemDangMuon.cshtml" />
     <Content Include="Areas\Admin\Views\MuonSach\ChonDocGia.cshtml" />
     <Content Include="Areas\Admin\Views\MuonSach\ChonSach.cshtml" />
+    <Content Include="Areas\Admin\Views\NhapSach\DSPhieuNhap.cshtml" />
+    <Content Include="Areas\Admin\Views\NhapSach\ThemPhieuNhap.cshtml" />
+    <Content Include="Areas\Admin\Views\NhapSach\CTPhieuNhap.cshtml" />
+    <Content Include="Areas\Admin\Views\NhapSach\ThemCTPhieuNhap.cshtml" />
+    <Content Include="Areas\Admin\Views\NhapSach\ChonSach.cshtml" />
+    <Content Include="Areas\Admin\Views\NhapSach\CapNhatNhapSach.cshtml" />
+    <Content Include="Areas\Admin\Views\NhapSach\XemPhieuNhap.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\buttons.bootstrap.min.js" />
     <Content Include="Scripts\buttons.flash.min.js" />

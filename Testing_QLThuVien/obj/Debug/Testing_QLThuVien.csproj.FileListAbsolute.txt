@@ -126,6 +126,8 @@ E:\Testing_QLThuVien\Testing_QLThuVien\bin\Antlr3.Runtime.pdb
 E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csprojResolveAssemblyReference.cache
 E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.dll
 E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.pdb
+E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.Migrations.init.resources
+E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csproj.GenerateResource.Cache
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\ApplicationInsights.config
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\csc.exe
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -186,10 +188,8 @@ E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.xml
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.Deployment.xml
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.Razor.xml
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Antlr3.Runtime.pdb
-E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.dll
-E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.pdb
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csprojResolveAssemblyReference.cache
-E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.Migrations.init.resources
-E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csproj.GenerateResource.Cache
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.Migrations.init.resources
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csproj.GenerateResource.Cache
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.dll
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.pdb

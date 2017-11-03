@@ -1,0 +1,135 @@
+﻿@model IEnumerable<Testing_QLThuVien.Models.PhieuNhapSach>
+
+@{
+    ViewBag.Title = "DSPhieuNhap";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    int stt = 1;
+}
+
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+
+            <div class="x_title">
+                <h2>Danh Sách Độc Giả</h2>
+                <div class="nav navbar-right panel_toolbox">
+                    <button type="button" class="btn btn-primary" onclick="createModallg('@Url.Action("ThemPhieuNhap", "NhapSach")')">Thêm Phiếu Nhập</button>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <table id="mytable" class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center">STT</th>
+                            <th style="text-align:center">
+                                Mã Phiếu
+                            </th>
+                            <th style="text-align:center">
+                                Ngày Nhập
+                            </th>
+                            <th style="text-align:center">
+                                Tổng Số Lượng
+                            </th>
+                            <th style="text-align:center">
+                                Tổng Tiền
+                            </th>
+                            <th style="text-align:center">
+                                Chức Năng
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Count() == 0)
+                        {
+                            <tr>
+                                <td colspan="6" style="text-align:center">Không có dữ liệu.</td>
+                            </tr>
+                        }
+                        else
+                        {
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td style="text-align:center">@stt</td>
+                                    <td style="text-align:center">
+                                        @Html.DisplayFor(modelItem => item.IDPhieuNhapSach)
+                                    </td>
+                                    <td style="text-align:center">
+                                        @String.Format("{0:dd/MM/yyyy}", item.NgayNhap)
+                                    </td>
+                                    <td style="text-align:center">
+                                        @Html.DisplayFor(modelItem => item.TongSoLuong)
+                                    </td>
+                                    <td style="text-align:center">
+                                        @Html.DisplayFor(modelItem => item.TongDongia)
+                                    </td>
+                                    <td style="text-align:center">
+                                        <input type="button" class="btn btn-round btn-info btn-xs" value="Thông Tin" onclick="createModallg('@Url.Action("XemPhieuNhap", "NhapSach", new { ma = item.IDPhieuNhapSach })')" />                                    
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade bs-example-modal-lg" id="showModallg" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="modelContentlg">
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" id="showModallg1" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="modelContentlg1">
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" id="showModallg2" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="modelContentlg2">
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="showModalsm" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content" id="modelContentsm">
+        </div>
+    </div>
+</div>
+
+<script>
+    function createModallg(url){
+        $('#modelContentlg').load(url);
+        $('#showModallg').modal('show');
+    }
+    function createModallg1(url){
+        $('#modelContentlg1').load(url);
+        $('#showModallg1').modal('show');
+    }
+    function createModallg2(url){
+        $('#modelContentlg2').load(url);
+        $('#showModallg2').modal('show');
+    }
+    function createModalsm(url) {
+        $('#modelContentsm').load(url);
+        $('#showModalsm').modal('show');
+    }
+    function ChonDG(url) {
+        $('#showModallg2').modal('hide');
+        $('#modelContentlg1').load(url);
+    }
+    function ThemCT() {
+        $('#showModallg1').modal('hide');
+        //$('#modelContentlg').load(url);
+    }
+</script>

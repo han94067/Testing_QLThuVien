@@ -1,0 +1,68 @@
+﻿@model Testing_QLThuVien.Models.PhieuNhapSach
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Thêm Sách Mới</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-horizontal form-label-left" novalidate">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                    Mã Phiếu Nhập<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input class="form-control" disabled readonly value="@Model.IDPhieuNhapSach" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                    Ngày Nhập<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input class="form-control" disabled readonly value="@String.Format("{0:dd/MM/yyyy}", DateTime.Now.Date)" />
+                </div>
+            </div>
+            <br />
+
+            @Html.Action("CTPhieuNhap", "NhapSach", new { ma = Model.IDPhieuNhapSach })
+
+            <br />
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                    Tổng Sô Lượng<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input class="form-control" disabled readonly value="@Model.TongSoLuong" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                    Tổng Đơn Giá<span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input class="form-control" disabled readonly value="@Model.TongDongia" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+        <input type="submit" class="btn btn-primary" value="Thêm" />
+    </div>
+}
+
+
+
