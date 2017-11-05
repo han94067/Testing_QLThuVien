@@ -31,22 +31,24 @@ namespace Testing_QLThuVien.Models
         public string IDNhaXuatBan { get; set; }
 
         [StringLength(50, ErrorMessage = "Tên sách không được vượt quá 50 kí tự.")]
-        [Required(ErrorMessage = "Xin mời nhập Tên Sách")]
+        [Required(ErrorMessage = "Xin mời nhập Tên Sách.")]
         public string TenSach { get; set; }
 
         [StringLength(200)]
         public string HinhAnh { get; set; }
 
-        [Required(ErrorMessage = "Xin mời nhập Năm Xuất Bản")]
-        [Range(2000, 2017, ErrorMessage = "Năm Xuất Bản từ năm 2000 đến năm 2017")]
+        [Required(ErrorMessage = "Xin mời nhập Năm Xuất Bản và không được nhập chữ hoặc ký tự đặc biệt.")]
+        [Range(2000, 2017, ErrorMessage = "Năm Xuất Bản từ năm 2000 đến năm 2017.")]
+        //[RegularExpression("^[0-9]*$", ErrorMessage = "Không được nhập chữ và ký tự đặc biệt.")]
         public int? NamXuatBan { get; set; }
 
         public int? SoLuong { get; set; }
 
         public int? SoLuongTon { get; set; }
 
-        [Required(ErrorMessage = "Xin mời nhập Trị Giá")]
-        [Range(1000, 10000000, ErrorMessage = "Trị Giá từ năm 1000 đến năm 10000000")]
+        [Required(ErrorMessage = "Xin mời nhập Trị Giá.")]
+        [Range(1000, 10000000, ErrorMessage = "Trị Giá từ năm 1.000 đến năm 10.000.000")]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "Không được nhập chữ và ký tự đặc biệt.")]
         public decimal? TriGia { get; set; }
 
         public int? TinhTrang { get; set; }

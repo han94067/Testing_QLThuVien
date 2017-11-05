@@ -39,11 +39,13 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class='input-group date' id='myDatepicker2'>
-                        <input type='text' class="form-control" name="NgaySinh"/>
+                        @Html.EditorFor(model => model.NgaySinh, new { htmlAttributes = new { @class = "form-control" } })      
+                        @*<input type='text' class="form-control" name="NgaySinh"/>*@
                         <span class="input-group-addon">
                             <i class="glyphicon glyphicon-th"></i>
                         </span>
                     </div>
+                    @Html.ValidationMessageFor(model => model.NgaySinh, "", new { @class = "text-danger" })
                 </div>
             </div>
 
@@ -87,7 +89,7 @@
 
 <script>
     $('#myDatepicker2').datetimepicker({
-        format: 'DD.MM.YYYY'
+        format: 'DD/MM/YYYY'
     });
 </script>
 

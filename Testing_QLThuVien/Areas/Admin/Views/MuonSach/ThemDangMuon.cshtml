@@ -23,6 +23,7 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">     
                     <input class="form-control" readonly value="@Session["TTDocGia"]" onclick="createModallg1('@Url.Action("ChonDocGia", "MuonSach")')" />
+                    @Html.ValidationMessageFor(model => model.IDDocGia, "", new { @class = "text-danger" })
                 </div>
             </div>
 
@@ -55,5 +56,6 @@
     </div>
 }
 
-
-
+<!--Validation-->
+<script src="~/Areas/Admin/Scripts/jquery.validate.js"></script>
+<script src="~/Areas/Admin/Scripts/jquery.validate.unobtrusive.js"></script>

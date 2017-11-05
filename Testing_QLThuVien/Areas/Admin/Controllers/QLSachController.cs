@@ -29,14 +29,12 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
             return View();
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult ThemSach([Bind(Include = "IDSach, IDTacGia, IDNhaXuatBan, IDTheLoai, TenSach, HinhAnh, NamXuatBan, SoLuong, SoLuongTon, TriGia, TinhTrang, MoTa")] Sach sach)
         {
             //string TacGia = f["TenTacGia"];
             //string NhaXuatBan = f["NhaXuatBan"];
 
-            //// Thêm tác giả
+            // Thêm tác giả
             //var tg = db.TacGias.Where(n => n.TenTacGia.Contains(TacGia)).ToList();
             //if(tg.Count() == 0)
             //{
@@ -72,15 +70,14 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
             //}
             //sach.IDNhaXuatBan = manxb;
 
-                sach.IDSach = "";
-                sach.HinhAnh = "Image";
-                sach.SoLuong = 0;
-                sach.SoLuongTon = 0;
-                sach.TinhTrang = 0;
-                db.Saches.Add(sach);
-                db.SaveChanges();
+            sach.IDSach = "";
+            sach.HinhAnh = "Image";
+            sach.SoLuong = 0;
+            sach.SoLuongTon = 0;
+            sach.TinhTrang = 0;
+            db.Saches.Add(sach);
+            db.SaveChanges();
 
-           
             return RedirectToAction("Sach");
         }
 

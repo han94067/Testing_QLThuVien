@@ -169,9 +169,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\DangNhapController.cs" />
     <Compile Include="Areas\Admin\Controllers\DocGiaController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
-    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\MuonSachController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhapSachController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhaXuatBanController.cs" />
@@ -184,6 +184,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711051623058_Initial.cs" />
+    <Compile Include="Migrations\201711051623058_Initial.Designer.cs">
+      <DependentUpon>201711051623058_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BangRangBuoc.cs" />
     <Compile Include="Models\ChiTietPhieuNhapSach.cs" />
     <Compile Include="Models\ChucVu.cs" />
@@ -398,7 +403,6 @@
     <Content Include="Areas\Admin\Views\DocGia\DSDocGia.cshtml" />
     <Content Include="Areas\Admin\Views\DocGia\ThemDocGia.cshtml" />
     <Content Include="Areas\Admin\Views\DocGia\ThongTin.cshtml" />
-    <Content Include="Areas\Admin\Views\Login\Login.cshtml" />
     <Content Include="Areas\Admin\Views\MuonSach\SachDaDat.cshtml" />
     <Content Include="Areas\Admin\Views\MuonSach\SachDangMuon.cshtml" />
     <Content Include="Areas\Admin\Views\MuonSach\SachDaTra.cshtml" />
@@ -422,6 +426,8 @@
     <Content Include="Areas\Admin\Views\NhapSach\CapNhatNhapSach.cshtml" />
     <Content Include="Areas\Admin\Views\NhapSach\XemPhieuNhap.cshtml" />
     <Content Include="Areas\Admin\Views\PhieuTienPhat\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_LayoutPageLogin.cshtml" />
+    <Content Include="Areas\Admin\Views\DangNhap\DangNhap.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\buttons.bootstrap.min.js" />
     <Content Include="Scripts\buttons.flash.min.js" />
@@ -491,6 +497,11 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201711051623058_Initial.resx">
+      <DependentUpon>201711051623058_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

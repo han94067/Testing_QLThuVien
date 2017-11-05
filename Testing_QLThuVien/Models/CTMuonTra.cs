@@ -34,6 +34,8 @@ namespace Testing_QLThuVien.Models
 
         public int? TinhTrangMuon { get; set; }
 
+        [Required(ErrorMessage = "Xin nhâp vào số lượng.")]
+        [Range(1, 10, ErrorMessage = "Số lượng phải từ 1 đến 10.")]
         public int? SoLuongThue { get; set; }
 
         public decimal? TriGia { get; set; }

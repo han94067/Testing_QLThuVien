@@ -20,10 +20,11 @@ namespace Testing_QLThuVien.Models
         [StringLength(5)]
         public string IDDocGia { get; set; }
 
-        [StringLength(11)]
+        [StringLength(11, ErrorMessage = "Số Điện Thoại không được quá 11 chữ số.")]    
         [Required(ErrorMessage = "Xin mời nhập Số Điện Thoại.")]
-        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Số điện thoại không chính xác")]
-        //[RegularExpression("^[0-9]*$ ", ErrorMessage = "Xin nhập đúng Số Điện Thoại.")]
+        [MinLength(9, ErrorMessage = "Số Điện Thoại không được nhỏ hơn 9 chữ số.")]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "Không được nhập chữ và ký tự đặc biệt.")]
+        //[RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Không được nhập chữ và ký tụ đặc biệt.")]
         public string SoDienThoai { get; set; }
 
         [StringLength(100)]
@@ -36,20 +37,21 @@ namespace Testing_QLThuVien.Models
         [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Không được nhập số và ký tự đặc biệt.")]
         public string TenDocGia { get; set; }
 
-        [StringLength(100)]
+        [StringLength(100, ErrorMessage = "Địa chỉ không được vượt quá 100 ký tự.")]
         [Required(ErrorMessage = "Xin mời nhập Địa Chỉ.")]
         public string DiaChi { get; set; }
 
-        [StringLength(50)]
+        [StringLength(50, ErrorMessage = "Email không được vượt quá 50 ký tự.")]
         [Required(ErrorMessage = "Xin mời nhập Email.")]
-        [DataType(DataType.EmailAddress)]
-        [RegularExpression(@"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}", ErrorMessage = "Xin nhập đúng Email.")]
+        [EmailAddress(ErrorMessage = "Email không chính xác.")]
+        //[RegularExpression(@"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}", ErrorMessage = "Xin nhập đúng Email.")]
         public string Email { get; set; }
 
-        [StringLength(11)]
+        [StringLength(9, ErrorMessage = "CMND không được nhập quá hoặc nhỏ hơn 9 chữ số.")]
         [Required(ErrorMessage = "Xin mời nhập CMND.")]
-        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Số điện thoại không chính xác")]
-        //[RegularExpression("^[0-9]*$ ", ErrorMessage = "Xin nhập đúng CMND.")]
+        [MinLength(9, ErrorMessage = "CMND không được nhập quá hoặc nhỏ hơn 9 chữ số.")]
+        //[RegularExpression("^[0-9]*$ ", ErrorMessage = "Không được nhập chữ và ký tự đặc biệt.")]
+        //[RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Không được nhập chữ và ký tự đặc biệt.")]
         public string CMND { get; set; }
 
         [Column(TypeName = "date")]
@@ -59,7 +61,7 @@ namespace Testing_QLThuVien.Models
         public DateTime? NgayHetHan { get; set; }
 
         [Column(TypeName = "date")]
-        [Required(ErrorMessage = "Xin mời nhập Ngày Sinh")]
+        [Required(ErrorMessage = "Xin mời nhập Ngày Sinh.")]
         public DateTime? NgaySinh { get; set; }
 
         public int? TinhTrang { get; set; }
