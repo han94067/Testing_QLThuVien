@@ -1,6 +1,6 @@
 ﻿@model Testing_QLThuVien.Models.Sach
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("ThemSach", "QLSach", FormMethod.Post, new { @enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
@@ -10,7 +10,7 @@
         </button>
         <h4 class="modal-title" id="myModalLabel">Thêm Sách Mới</h4>
     </div>
-    <div class="modal-body">
+    <div class="modal-body" >
         <div class="form-horizontal form-label-left" novalidate">
 
 
@@ -19,7 +19,7 @@
                     Tên Sách <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    @Html.EditorFor(model => model.TenSach, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.TenSach, new { htmlAttributes = new { @class = "form-control", id = "tensach" } })
                     @Html.ValidationMessageFor(model => model.TenSach, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -28,8 +28,7 @@
                     Tên Tác Giả <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    @Html.DropDownList("IDTacGia", null, htmlAttributes: new { @class = "form-control" })
-                    
+                    @Html.DropDownList("IDTacGia", null, htmlAttributes: new { @class = "form-control", id = "idtacgia" })
                 </div>
             </div>
             <div class="form-group">
@@ -38,7 +37,7 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     @*<input type="text" name="NhaXuatBan" class="form-control" />*@
-                    @Html.DropDownList("IDNhaXuatBan", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.DropDownList("IDNhaXuatBan", null, htmlAttributes: new { @class = "form-control", id = "idnhaxuatban" })
                 </div>
             </div>
             <div class="form-group">
@@ -46,7 +45,7 @@
                     Thể Loại <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    @Html.DropDownList("IDTheLoai", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.DropDownList("IDTheLoai", null, htmlAttributes: new { @class = "form-control", id = "idtheloai" })
                 </div>
             </div>
             <div class="form-group">
@@ -54,7 +53,7 @@
                     Năm Xuất Bản <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    @Html.EditorFor(model => model.NamXuatBan, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.NamXuatBan, new { htmlAttributes = new { @class = "form-control", id = "namxuatban" } })
                     @Html.ValidationMessageFor(model => model.NamXuatBan, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -63,7 +62,7 @@
                     Trị Giá <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    @Html.EditorFor(model => model.TriGia, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.TriGia, new { htmlAttributes = new { @class = "form-control", id = "trigia" } })
                     @Html.ValidationMessageFor(model => model.TriGia, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -72,19 +71,46 @@
                     Mô Tả
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    @Html.EditorFor(model => model.MoTa, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => model.MoTa, new { htmlAttributes = new { @class = "form-control", id = "mota" } })
                     @Html.ValidationMessageFor(model => model.MoTa, "", new { @class = "text-danger" })
                 </div>
             </div>
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+                    Hình ảnh
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    @Html.EditorFor(model => model.HinhAnh, new { htmlAttributes = new { @class = "form-control", type = "file", name = "uploadfile", id = "uploadfile", onchange = "readfile(this)" } })
+                    @*<input type="file" name="uploadfile" class="form-control" required/>*@
+                    @Html.ValidationMessageFor(model => model.HinhAnh, "", new { @class = "text-danger" })
+                    <img id="image_preview" src="http://nhom3thuvien.somee.com/Images/None.jpg" alt="your image" width="200" height="200" />
+                </div>
+            </div>
+
         </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-        <input type="submit" class="btn btn-primary" value="Thêm"/>
+        <input type="submit" class="btn btn-primary" value="Thêm" />
     </div>
 }
+
 
 <!--Validation-->
 <script src="~/Areas/Admin/Scripts/jquery.validate.js"></script>
 <script src="~/Areas/Admin/Scripts/jquery.validate.unobtrusive.js"></script>
 
+<script type="text/javascript">
+
+    function readfile(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                $('#image_preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>

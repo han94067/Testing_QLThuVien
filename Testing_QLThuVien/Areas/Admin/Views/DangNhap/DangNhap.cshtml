@@ -1,14 +1,10 @@
-﻿@model Testing_QLThuVien.Models.NhanVien
-
-@{
-    ViewBag.Title = "DangNhap";
+﻿@{
     Layout = "~/Areas/Admin/Views/Shared/_LayoutPageLogin.cshtml";
 }
 
-@using (Html.BeginForm("DangNhap", "DangNhap")) 
+@using (Html.BeginForm("DangNhap", "DangNhap"))
 {
     @Html.AntiForgeryToken()
-
 
     <div class="login_wrapper">
         <div class="animate form login_form">
@@ -16,31 +12,20 @@
                 <p class="ThongBao" style="font-size:20px">@ViewBag.ThongBao</p>
                 <form>
                     <h1>Đặng Nhập</h1>
-                        <div>
-                            <input name="TenDangNhap" type="text" class="form-control" placeholder="Tên Đăng Nhập" />
-                            <p style="color:red; padding-bottom:10px; font-size:20px">@ViewData["Loi1"]</p>
-                        </div>
-                        <div>
-                            <input name="MatKhau" type="password" class="form-control" placeholder="Mật Khẩu" />
-                            <p style="color:red; padding-bottom:10px; font-size:20px">@ViewData["Loi2"]</p>
-                        </div>
-                        <div>
-                            <input type="submit" class="btn btn-default submit" value="Đăng Nhập" />
-                        </div>                   
+                    <div>
+                        <input name="TenDangNhap" type="text" class="form-control" placeholder="Tên Đăng Nhập" />
+                        <p style="color:red; padding-bottom:10px; font-size:20px">@ViewData["Loi1"]</p>
+                    </div>
+                    <div>
+                        <input name="MatKhau" type="password" class="form-control" placeholder="Mật Khẩu" />
+                        <p style="color:red; padding-bottom:10px; font-size:20px">@ViewData["Loi2"]</p>
+                    </div>
+                    <div>
+                        <input type="submit" class="btn btn-default submit" value="Đăng Nhập" />
+                    </div>
                     <div class="clearfix"></div>
                 </form>
             </section>
         </div>
     </div>
-
-
-
-
-
-        @*<div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>*@
-
 }

@@ -162,6 +162,7 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Models\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -169,9 +170,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\CustomRoleProvider.cs" />
     <Compile Include="Areas\Admin\Controllers\DangNhapController.cs" />
     <Compile Include="Areas\Admin\Controllers\DocGiaController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HoTroController.cs" />
     <Compile Include="Areas\Admin\Controllers\MuonSachController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhapSachController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhaXuatBanController.cs" />
@@ -184,11 +187,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201711051623058_Initial.cs" />
-    <Compile Include="Migrations\201711051623058_Initial.Designer.cs">
-      <DependentUpon>201711051623058_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BangRangBuoc.cs" />
     <Compile Include="Models\ChiTietPhieuNhapSach.cs" />
     <Compile Include="Models\ChucVu.cs" />
@@ -408,7 +406,6 @@
     <Content Include="Areas\Admin\Views\MuonSach\SachDaTra.cshtml" />
     <Content Include="Areas\Admin\Views\MuonSach\SachQuaHan.cshtml" />
     <Content Include="Areas\Admin\Views\NhaXuatBan\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\QLSach\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\QLSach\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\QLSach\Sach.cshtml" />
     <Content Include="Areas\Admin\Views\QLSach\ThemSach.cshtml" />
@@ -428,6 +425,9 @@
     <Content Include="Areas\Admin\Views\PhieuTienPhat\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_LayoutPageLogin.cshtml" />
     <Content Include="Areas\Admin\Views\DangNhap\DangNhap.cshtml" />
+    <Content Include="Areas\Admin\Views\DangNhap\BaoLoi.cshtml" />
+    <Content Include="Areas\Admin\Views\HoTro\LienHe.cshtml" />
+    <Content Include="Areas\Admin\Views\HoTro\QuyDinh.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\buttons.bootstrap.min.js" />
     <Content Include="Scripts\buttons.flash.min.js" />
@@ -497,11 +497,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201711051623058_Initial.resx">
-      <DependentUpon>201711051623058_Initial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

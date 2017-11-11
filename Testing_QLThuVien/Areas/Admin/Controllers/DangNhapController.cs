@@ -4,13 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Testing_QLThuVien.Models;
+using System.Web.Security;
 
 namespace Testing_QLThuVien.Areas.Admin.Controllers
 {
     public class DangNhapController : Controller
     {
         QLThuVien db = new QLThuVien();
-        // GET: Admin/DangNhap
+
+        [HttpGet]
         public ActionResult DangNhap()
         {
             return View();
@@ -18,7 +20,7 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult DangNhap([Bind(Include = "IDNhanVien, IDChucVu, TenNhanVien, GioiTinh, DiaChi, SoDienThoai, Email, CMND, NgayVaoLam, MatKhau")] NhanVien nv, FormCollection f)
+        public ActionResult DangNhap(FormCollection f, string returnUrl)
         {
             var tenDN = f["TenDangNhap"];
             var MK = f["MatKhau"];
@@ -38,8 +40,18 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
                 NhanVien ad = db.NhanViens.SingleOrDefault(n => n.TenNhanVien == tenDN && n.MatKhau == MK);
                 if (ad != null)
                 {
-                    Session["TaiKhoanAdmin"] = ad;
-                    return RedirectToAction("Index", "Home");
+                    FormsAuthentication.SetAuthCookie(ad.TenNhanVien, false);
+                    if (!String.IsNullOrEmpty(returnUrl))
+                    {
+                        return RedirectToAction("BaoLoi", "DangNhap");
+                    }
+
+                    else
+                    {
+                        Session["TaiKhoanAdmin"] = ad;
+                        Session["ChucVu"] = ad.ChucVu.TenChucVu.ToString();
+                        return RedirectToAction("Index", "Home");
+                    }
                 }
                 else
                 {
@@ -49,5 +61,18 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
             }
             return View("DangNhap");
         }
+
+        public ActionResult DangXuat()
+        {
+            Session["TaiKhoanAdmin"] = null;
+            Session["ChucVu"] = "";
+            return RedirectToAction("DangNhap");
+        }
+
+        public ActionResult BaoLoi()
+        {
+            return View();
+        }
+
     }
 }

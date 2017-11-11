@@ -35,11 +35,11 @@ namespace Testing_QLThuVien.Models
         public string TenSach { get; set; }
 
         [StringLength(200)]
+        [Required(ErrorMessage = "Hình ảnh không được bỏ trống.")]
         public string HinhAnh { get; set; }
 
         [Required(ErrorMessage = "Xin mời nhập Năm Xuất Bản và không được nhập chữ hoặc ký tự đặc biệt.")]
         [Range(2000, 2017, ErrorMessage = "Năm Xuất Bản từ năm 2000 đến năm 2017.")]
-        //[RegularExpression("^[0-9]*$", ErrorMessage = "Không được nhập chữ và ký tự đặc biệt.")]
         public int? NamXuatBan { get; set; }
 
         public int? SoLuong { get; set; }
@@ -47,7 +47,7 @@ namespace Testing_QLThuVien.Models
         public int? SoLuongTon { get; set; }
 
         [Required(ErrorMessage = "Xin mời nhập Trị Giá.")]
-        [Range(1000, 10000000, ErrorMessage = "Trị Giá từ năm 1.000 đến năm 10.000.000")]
+        [Range(1000, 10000000, ErrorMessage = "Trị Giá từ 1.000 đến 10.000.000")]
         [RegularExpression("^[0-9]*$", ErrorMessage = "Không được nhập chữ và ký tự đặc biệt.")]
         public decimal? TriGia { get; set; }
 

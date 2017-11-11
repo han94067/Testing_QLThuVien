@@ -6,9 +6,11 @@ using System.Web.Mvc;
 using Testing_QLThuVien.Models;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 
 namespace Testing_QLThuVien.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "CV001")]
     public class QLSachController : Controller
     {
         QLThuVien db = new QLThuVien();
@@ -16,7 +18,6 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult Sach()
         {
-            //ViewBag.IDTheLoai = new SelectList(db.TheLoais, "IDTheLoai", "TenTheLoai");
             return View(db.Saches.ToList());
         }
 
@@ -29,55 +30,35 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
             return View();
         }
 
-        public ActionResult ThemSach([Bind(Include = "IDSach, IDTacGia, IDNhaXuatBan, IDTheLoai, TenSach, HinhAnh, NamXuatBan, SoLuong, SoLuongTon, TriGia, TinhTrang, MoTa")] Sach sach)
+        [HttpPost]
+        public ActionResult ThemSach([Bind(Include = "IDSach, IDTacGia, IDNhaXuatBan, IDTheLoai, TenSach, HinhAnh, NamXuatBan, SoLuong, SoLuongTon, TriGia, TinhTrang, MoTa")] Sach sach, HttpPostedFileBase uploadfile)
         {
-            //string TacGia = f["TenTacGia"];
-            //string NhaXuatBan = f["NhaXuatBan"];
+            //return Json(sach, JsonRequestBehavior.AllowGet);
+            String host = "http://qlthuvien.somee.com/Images/";
+            uploadfile = Request.Files[0];
 
-            // Thêm tác giả
-            //var tg = db.TacGias.Where(n => n.TenTacGia.Contains(TacGia)).ToList();
-            //if(tg.Count() == 0)
+            //if (uploadfile.FileName != "" && uploadfile != null)
             //{
-            //    TacGia tacgia = new TacGia();
-            //    tacgia.IDTacGia = "";
-            //    tacgia.TenTacGia = TacGia;
-            //    db.TacGias.Add(tacgia);
-            //    db.SaveChanges();         
-            //}
-            //tg = db.TacGias.Where(n => n.TenTacGia.Contains(TacGia)).ToList();
-            //string matg = "";
-            //foreach (var item in tg)
+            var fileName = System.IO.Path.GetFileName(uploadfile.FileName);
+            var rondom = fileName;
+            //var rondom = Guid.NewGuid() + fileName;
+            var path = System.IO.Path.Combine(Server.MapPath("~/Images"), rondom);
+            var filetext = System.IO.Path.GetExtension(uploadfile.FileName).Substring(1);
+            var supportedTypes = new[] { "jpg", "jpeg", "png" };
+            //if (!supportedTypes.Contains(filetext))
             //{
-            //    matg = item.IDTacGia;
+            //    return Content("<script language='javascript' type='text/javascript'>alert('Hello world!');</script>");
             //}
-            //sach.IDTacGia = matg;
-
-            // Thêm nhà xuất bản
-            //var nxb = db.NhaXuatBans.Where(n => n.TenNhaXuatBan.Contains(NhaXuatBan)).ToList();
-            //if(nxb.Count() == 0)
-            //{
-            //    NhaXuatBan NXB = new NhaXuatBan();
-            //    NXB.IDNhaXuatBan = "";
-            //    NXB.TenNhaXuatBan = NhaXuatBan;
-            //    db.NhaXuatBans.Add(NXB);
-            //    db.SaveChanges();
-            //}
-            //nxb = db.NhaXuatBans.Where(n => n.TenNhaXuatBan.Contains(NhaXuatBan)).ToList();
-            //string manxb = "";
-            //foreach (var item in nxb)
-            //{
-            //    manxb = item.IDNhaXuatBan;
-            //}
-            //sach.IDNhaXuatBan = manxb;
-
+            var image = new System.Web.Helpers.WebImage(uploadfile.InputStream);
+            image.Save(path);// lưu vào project
+            rondom = host + rondom;
+            sach.HinhAnh = rondom;// luu vào database
             sach.IDSach = "";
-            sach.HinhAnh = "Image";
             sach.SoLuong = 0;
             sach.SoLuongTon = 0;
-            sach.TinhTrang = 0;
+            sach.TinhTrang = 1;
             db.Saches.Add(sach);
             db.SaveChanges();
-
             return RedirectToAction("Sach");
         }
 
@@ -98,7 +79,7 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IDSach, IDTacGia, IDNhaXuatBan, IDTheLoai, TenSach, HinhAnh, NamXuatBan, SoLuong, SoLuongTon, TriGia, TinhTrang, MoTa")] Sach sach)
+        public ActionResult Edit([Bind(Include = "IDSach, IDTacGia, IDNhaXuatBan, IDTheLoai, TenSach, HinhAnh, NamXuatBan, SoLuong, SoLuongTon, TriGia, TinhTrang, MoTa")] Sach sach, HttpPostedFileBase uploadfile)
         {
             if (sach == null)
             {
@@ -106,68 +87,28 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
                 return null;
             }
 
-            //string TacGia = f["TenTacGia"];
-            //string NhaXuatBan = f["NhaXuatBan"];
+            String host = "http://qlthuvien.somee.com/Images/";
+            uploadfile = Request.Files[0];
 
-            //// Thêm tác giả
-            //var tg = db.TacGias.Where(n => n.TenTacGia.Contains(TacGia)).ToList();
-            //if (tg.Count() == 0)
+            //if (uploadfile.FileName != "" && uploadfile != null)
             //{
-            //    TacGia tacgia = new TacGia();
-            //    tacgia.IDTacGia = "";
-            //    tacgia.TenTacGia = TacGia;
-            //    db.TacGias.Add(tacgia);
-            //    db.SaveChanges();
-            //}
-            //tg = db.TacGias.Where(n => n.TenTacGia.Contains(TacGia)).ToList();
-            //string matg = "";
-            //foreach (var item in tg)
+            var fileName = System.IO.Path.GetFileName(uploadfile.FileName);
+            var rondom = fileName;
+            //var rondom = Guid.NewGuid() + fileName;
+            var path = System.IO.Path.Combine(Server.MapPath("~/Images"), rondom);
+            var filetext = System.IO.Path.GetExtension(uploadfile.FileName).Substring(1);
+            var supportedTypes = new[] { "jpg", "jpeg", "png" };
+            //if (!supportedTypes.Contains(filetext))
             //{
-            //    matg = item.IDTacGia;
+            //    return Content("<script language='javascript' type='text/javascript'>alert('Hello world!');</script>");
             //}
-            //sach.IDTacGia = matg;
+            var image = new System.Web.Helpers.WebImage(uploadfile.InputStream);
+            image.Save(path);// lưu vào project
+            rondom = host + rondom;
+            sach.HinhAnh = rondom;// luu vào database
 
-            //// Thêm nhà xuất bản
-            //var nxb = db.NhaXuatBans.Where(n => n.TenNhaXuatBan.Contains(NhaXuatBan)).ToList();
-            //if (nxb.Count() == 0)
-            //{
-            //    NhaXuatBan NXB = new NhaXuatBan();
-            //    NXB.IDNhaXuatBan = "";
-            //    NXB.TenNhaXuatBan = NhaXuatBan;
-            //    db.NhaXuatBans.Add(NXB);
-            //    db.SaveChanges();
-            //}
-            //nxb = db.NhaXuatBans.Where(n => n.TenNhaXuatBan.Contains(NhaXuatBan)).ToList();
-            //string manxb = "";
-            //foreach (var item in nxb)
-            //{
-            //    manxb = item.IDNhaXuatBan;
-            //}
-            //sach.IDNhaXuatBan = manxb;
 
-            //UpdateModel(sach);
             db.Entry(sach).State = EntityState.Modified;
-            db.SaveChanges();
-            return RedirectToAction("Sach");
-        }
-
-        [HttpGet]
-        public ActionResult Delete(string ma)
-        {
-            Sach Book = db.Saches.Find(ma);
-            if (Book == null)
-            {
-                Response.StatusCode = 404;
-                return null;
-            }
-            return PartialView(Book);
-        }
-
-        [HttpPost]
-        public ActionResult Delete([Bind(Include = "IDSach, IDTacGia, IDNhaXuatBan, IDTheLoai, TenSach, HinhAnh, NamXuatBan, SoLuong, SoLuongTon, TriGia, TinhTrang, MoTa")] Sach sach)
-        {
-            Sach s = db.Saches.Find(sach.IDSach);
-            db.Saches.Remove(s);
             db.SaveChanges();
             return RedirectToAction("Sach");
         }
