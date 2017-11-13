@@ -1,0 +1,108 @@
+﻿@using Testing_QLThuVien.Models;
+@model Sach
+
+@{
+    ViewBag.Title = "XemChiTiet";
+    Layout = "~/Areas/User/Views/Layout/NguoiDungLayout.cshtml";
+}
+
+@section NoiDungBenPhai{
+
+}
+
+<div class="row">
+    <div id="HinhAnh">
+        @*<img src="@Url.Content("~/HinhAnhSP/"+Model.AnhBia)" />*@
+        <img class="product-image img-responsive lazy" alt="" src="https://v2.tikicdn.com/cache/200x200/media/catalog/product/m/u/muahedaqua.u5567.d20171006.t144727.909323_2.jpg" style="display: block" height="600" width="400" />
+    </div>
+
+    <div id="ThongTin" ng-app="" ng-init="a = 1">
+        <div id="TenSach">@Model.TenSach</div>
+        <div id="ChuDe">Chủ đề: @ViewBag.TenChuDe</div>
+        <div id="NhaXuatBan">Nhà xuất bản: @ViewBag.NhaXuatBan</div>
+        <div id="Mota">Nội dung tóm tắt:<br />- @Model.MoTa <br /></div>
+        @*Dịch dấu chấm động đơn giá sử dụng string.Format("{0:0,0}", tham số)*@
+        @*<div id="Gia"><span style="color: green; font-weight: normal;">Đơn giá:</span><br /><span id="Gia"> @string.Format("{0:0,0}", @Model.GiaBan) VNĐ</span></div>*@
+        <br />
+
+        @if (Model.SoLuong == 0)
+        {
+            <b style="color:red; font-size:35px">Sách Hết Hàng</b>
+        }
+        else
+        {
+            using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMaSach = Model.IDSach, @strURL = Request.Url.ToString() }))
+            {
+                <p>Số Lượng Còn Lại: @Model.SoLuong</p>
+                <p>Số Lượng Đặt: <input name="SoLuongDat" type="text" /></p>
+                <p class="text-danger">@Session["LoiSoLuong"].ToString()</p>
+                <br />
+                <input type="submit" style="cursor:pointer" value="Đặt Sách" id="btnGioHang" class="btn btn-primary">
+            }
+        }
+    </div>
+    <div style="clear:both"></div>
+</div>
+
+
+@*Css Thông tin sách*@
+<style>
+    /*Ẩn div body*/
+    #divNoiDungBenPhai {
+        display: none;
+    }
+
+    /*Ẩn slider (Ghi chú: Thẻ section bên trang NguoiDungLayOut.cshtml )*/
+    #divMenuSlider {
+        display: none;
+    }
+
+    #HinhAnh {
+        float: left;
+    }
+
+    #ThongTin {
+        float: left;
+        width: 600px;
+    }
+
+    #TenSach {
+        font-weight: normal;
+        font-size: 30pt;
+        height: auto;
+        word-wrap: break-word; /*Canh nội dung tự xuống dòng */
+        color: red;
+    }
+
+    #ChuDe, #NhaXuatBan {
+        font-size: 20pt;
+        font-weight: normal;
+        color: black;
+        height: auto;
+    }
+
+    #Mota {
+        font-weight: normal;
+        color: black;
+        word-wrap: break-word;
+        height: auto;
+    }
+
+    #Gia span#Gia {
+        font-weight: normal;
+        color: orange;
+        font-size: 25pt;
+        height: auto;
+    }
+
+    #btnGioHang {
+        font-family: 'FontAwesome','Segoe UI';
+        background-color: red;
+    }
+
+        #btnGioHang:hover {
+            background-color: #a30a11;
+        }
+</style>
+
+

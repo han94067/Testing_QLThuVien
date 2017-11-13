@@ -128,6 +128,7 @@ E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.dll
 E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.pdb
 E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.Migrations.Initial.resources
 E:\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csproj.GenerateResource.Cache
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csprojResolveAssemblyReference.cache
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\ApplicationInsights.config
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\csc.exe
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -145,6 +146,7 @@ E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Testing_QLThuVien.dll.config
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Testing_QLThuVien.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Testing_QLThuVien.pdb
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Antlr3.Runtime.dll
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Edi.Web.MvcExtensions.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\EntityFramework.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\EntityFramework.SqlServer.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.Agent.Intercept.dll
@@ -157,6 +159,8 @@ E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.ApplicationInsights.
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.Web.Infrastructure.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Newtonsoft.Json.dll
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\PagedList.dll
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\PagedList.Mvc.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\System.Net.Http.Formatting.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Helpers.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Http.dll
@@ -176,6 +180,8 @@ E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.Web.xml
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.AI.WindowsServer.xml
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.ApplicationInsights.xml
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\PagedList.xml
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\PagedList.Mvc.xml
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Newtonsoft.Json.xml
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\System.Net.Http.Formatting.xml
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.Helpers.xml
@@ -190,4 +196,3 @@ E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\System.Web.WebPages.Razor.xml
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\bin\Antlr3.Runtime.pdb
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.pdb
-E:\GitHub\Testing_QLThuVien\Testing_QLThuVien\obj\Debug\Testing_QLThuVien.csprojResolveAssemblyReference.cache

@@ -1,0 +1,79 @@
+﻿@using Testing_QLThuVien.Models;
+@model List<GioHang>
+
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Areas/User/Views/Layout/NguoiDungLayout.cshtml";
+}
+
+<h2 style="margin-left:2%;font-weight:normal;color:black">Giỏ Hàng Của Bạn</h2>
+<hr />
+<table id="divGioHang" class="col-lg-10">
+    <thead>
+        <tr>
+            <td>Mã sách</td>
+            <td>Tên sách</td>
+            <td>Hình Ảnh</td>
+            <td>Đơn giá</td>
+            <td>Số lượng</td>
+            <td>Thành tiền</td>
+            <td>Chức năng</td>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                <td colspan="7" style="text-align:center">Giỏ Hàng Chưa Có Gì.</td>
+            </tr>
+        }
+        else
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.iMaSach</td>
+
+                    <td>@item.sTenSach</td>
+
+                    <td><img src="@item.sHinhAnh" /></td>
+
+                    <td>@item.sDonGia</td>
+
+                    <td>@item.iSoLuong</td>
+
+                    <td>@String.Format("{0:0,0}", (item.iSoLuong * item.sDonGia) + ((item.iSoLuong * item.sDonGia) * 10 / 100)) VNĐ</td>
+
+                    <td>
+                        @Html.ActionLink("Xóa", "XoaGioHang", new { @iMaSP = item.iMaSach })
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td colspan="7" style="text-align:right;color:blue">
+                    @using (Html.BeginForm("DatHang", "GioHang"))
+                    {
+                        <input type="submit" value="Đặt hàng" />
+                    }
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
+
+@*Css giỏ hàng*@
+<style>
+    #divGioHang {
+        border: 1px solid #EEEEEE;
+        margin-left: 10%;
+    }
+
+        #divGioHang td {
+            padding: 10px;
+            border: 1px solid #EEEEEE;
+        }
+</style>
+

@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Edi.Web.MvcExtensions, Version=5.2.3.1, Culture=neutral, PublicKeyToken=8a476f025a04049b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Edi.Web.MvcExtensions.5.2.3.1\lib\net45\Edi.Web.MvcExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -85,6 +89,14 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -160,7 +172,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Models\" />
     <Folder Include="Images\" />
   </ItemGroup>
@@ -182,6 +193,11 @@
     <Compile Include="Areas\Admin\Controllers\QLSachController.cs" />
     <Compile Include="Areas\Admin\Controllers\TacGiaController.cs" />
     <Compile Include="Areas\Admin\Controllers\TheLoaiController.cs" />
+    <Compile Include="Areas\User\Controllers\DocGiasController.cs" />
+    <Compile Include="Areas\User\Controllers\GioHangController.cs" />
+    <Compile Include="Areas\User\Controllers\HomeController.cs" />
+    <Compile Include="Areas\User\Controllers\SachController.cs" />
+    <Compile Include="Areas\User\Controllers\TimKiemController.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -192,6 +208,7 @@
     <Compile Include="Models\ChucVu.cs" />
     <Compile Include="Models\CTMuonTra.cs" />
     <Compile Include="Models\DocGia.cs" />
+    <Compile Include="Models\GioHang.cs" />
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\NhaXuatBan.cs" />
     <Compile Include="Models\PhieuNhapSach.cs" />
@@ -323,6 +340,35 @@
     <Content Include="Areas\Admin\Scripts\skycons.js" />
     <Content Include="Areas\Admin\Scripts\vfs_fonts.js" />
     <None Include="Areas\Admin\Scripts\_references.js" />
+    <Content Include="Areas\User\Content\bootstrap.css" />
+    <Content Include="Areas\User\Content\bootstrap.min.css" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\css\font-awesome.css" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\css\font-awesome.min.css" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\User\Content\NguoiDungCssLayout\fonts.css" />
+    <Content Include="Areas\User\Content\NguoiDungCssLayout\NguoiDungCssLayout.css" />
+    <Content Include="Areas\User\Content\NguoiDungCssLayout\screen.css" />
+    <Content Include="Areas\User\Content\PagedList.css" />
+    <Content Include="Areas\User\Content\Site.css" />
+    <Content Include="Areas\User\Content\TrangChuCss.css" />
+    <Content Include="Areas\User\HinhAnh\imgSearch.png" />
+    <Content Include="Areas\User\NivoSlider\jquery.nivo.slider.js" />
+    <Content Include="Areas\User\NivoSlider\jquery.nivo.slider.pack.js" />
+    <Content Include="Areas\User\NivoSlider\nivo-slider.css" />
+    <Content Include="Areas\User\Scripts\bootstrap.js" />
+    <Content Include="Areas\User\Scripts\bootstrap.min.js" />
+    <None Include="Areas\User\Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Areas\User\Scripts\jquery-1.10.2.js" />
+    <Content Include="Areas\User\Scripts\jquery-1.10.2.min.js" />
+    <None Include="Areas\User\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Areas\User\Scripts\jquery.validate.js" />
+    <Content Include="Areas\User\Scripts\jquery.validate.min.js" />
+    <Content Include="Areas\User\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Areas\User\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Areas\User\Scripts\modernizr-2.6.2.js" />
+    <Content Include="Areas\User\Scripts\respond.js" />
+    <Content Include="Areas\User\Scripts\respond.min.js" />
+    <None Include="Areas\User\Scripts\_references.js" />
     <Content Include="Content\animate.min.css" />
     <Content Include="Content\bootstrap-datetimepicker.css" />
     <Content Include="Content\bootstrap-progressbar-3.3.4.min.css" />
@@ -339,6 +385,7 @@
     <Content Include="Content\jquery-jvectormap-2.0.3.css" />
     <Content Include="Content\jqvmap.min.css" />
     <Content Include="Content\nprogress.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Content\responsive.bootstrap.min.css" />
     <Content Include="Content\scroller.bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -428,6 +475,50 @@
     <Content Include="Areas\Admin\Views\DangNhap\BaoLoi.cshtml" />
     <Content Include="Areas\Admin\Views\HoTro\LienHe.cshtml" />
     <Content Include="Areas\Admin\Views\HoTro\QuyDinh.cshtml" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\fonts\FontAwesome.otf" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\less\bordered-pulled.less" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\less\core.less" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\less\fixed-width.less" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\less\font-awesome.less" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\less\icons.less" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\less\larger.less" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\less\list.less" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\less\mixins.less" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\less\path.less" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\less\rotated-flipped.less" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\less\spinning.less" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\less\stacked.less" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\less\variables.less" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\scss\font-awesome.scss" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\scss\_bordered-pulled.scss" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\scss\_core.scss" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\scss\_fixed-width.scss" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\scss\_icons.scss" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\scss\_larger.scss" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\scss\_list.scss" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\scss\_mixins.scss" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\scss\_path.scss" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\scss\_rotated-flipped.scss" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\scss\_spinning.scss" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\scss\_stacked.scss" />
+    <Content Include="Areas\User\Content\font-awesome-4.2.0\scss\_variables.scss" />
+    <Content Include="Areas\User\Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Areas\User\Views\DocGias\Create.cshtml" />
+    <Content Include="Areas\User\Views\DocGias\DangNhap.cshtml" />
+    <Content Include="Areas\User\Views\DocGias\Index.cshtml" />
+    <Content Include="Areas\User\Views\GioHang\GioHang.cshtml" />
+    <Content Include="Areas\User\Views\GioHang\GioHangPartial.cshtml" />
+    <Content Include="Areas\User\Views\GioHang\SuaGioHang.cshtml" />
+    <Content Include="Areas\User\Views\Home\Index.cshtml" />
+    <Content Include="Areas\User\Views\Layout\NguoiDungLayout.cshtml" />
+    <Content Include="Areas\User\Views\Sach\Sach.cshtml" />
+    <Content Include="Areas\User\Views\Sach\SachMoiPartial.cshtml" />
+    <Content Include="Areas\User\Views\Sach\XemChiTiet.cshtml" />
+    <Content Include="Areas\User\Views\TimKiem\KetQuaTimKiem.cshtml" />
+    <Content Include="Areas\User\Views\GioHang\DGQuaHan.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\buttons.bootstrap.min.js" />
     <Content Include="Scripts\buttons.flash.min.js" />

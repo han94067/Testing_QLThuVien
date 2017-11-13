@@ -20,32 +20,32 @@ namespace Testing_QLThuVien.Models
         [StringLength(5)]
         public string IDDocGia { get; set; }
 
-        [StringLength(11, ErrorMessage = "Số Điện Thoại không được quá 11 chữ số.")]
+        [StringLength(11, ErrorMessage = "Số Điện Thoại không chính xác.")]
         [Required(ErrorMessage = "Xin mời nhập Số Điện Thoại.")]
-        [MinLength(9, ErrorMessage = "Số Điện Thoại không được nhỏ hơn 9 chữ số.")]
-        [RegularExpression("^[0-9]*$", ErrorMessage = "Không được nhập chữ và ký tự đặc biệt.")]
+        [MinLength(9, ErrorMessage = "Số Điện Thoại không chính xác.")]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "Số Điện Thoại không chính xác.")]
         public string SoDienThoai { get; set; }
 
         [StringLength(100)]
         public string MatKhau { get; set; }
 
         [StringLength(50)]
-        [Required(ErrorMessage = "Xin mời nhập Tên Độc Giả.")]
+        [Required(ErrorMessage = "Không được để trống tên độc giả.")]
         [RegularExpression(@"^[a-zA-Z''-'\s]{1,40}$", ErrorMessage = "Không được nhập số và ký tự đặc biệt.")]
         public string TenDocGia { get; set; }
 
         [StringLength(100, ErrorMessage = "Địa chỉ không được vượt quá 100 ký tự.")]
-        [Required(ErrorMessage = "Xin mời nhập Địa Chỉ.")]
+        [Required(ErrorMessage = "Không được để trông địa chỉ.")]
         public string DiaChi { get; set; }
 
         [StringLength(50, ErrorMessage = "Email không được vượt quá 50 ký tự.")]
-        [Required(ErrorMessage = "Xin mời nhập Email.")]
+        [Required(ErrorMessage = "Không được đê trống Email.")]
         [EmailAddress(ErrorMessage = "Email không chính xác.")]
         public string Email { get; set; }
 
-        [StringLength(9, ErrorMessage = "CMND không được nhập quá hoặc nhỏ hơn 9 chữ số.")]
-        [Required(ErrorMessage = "Xin mời nhập CMND.")]
-        [MinLength(9, ErrorMessage = "CMND không được nhập quá hoặc nhỏ hơn 9 chữ số.")]
+        [StringLength(9, ErrorMessage = "Số Chứng Minh Nhân Dân không chính xác.")]
+        [Required(ErrorMessage = "Xin mời nhập số Chứng Minh Nhân Dân.")]
+        [MinLength(9, ErrorMessage = "Số Chứng Minh Nhân Dân không chính xác.")]
         public string CMND { get; set; }
 
         [Column(TypeName = "date")]
@@ -55,6 +55,7 @@ namespace Testing_QLThuVien.Models
         public DateTime? NgayHetHan { get; set; }
 
         [Column(TypeName = "date")]
+        [Required(ErrorMessage = "Không được để trống ngày sinh.")]
         public DateTime? NgaySinh { get; set; }
 
         public int? TinhTrang { get; set; }

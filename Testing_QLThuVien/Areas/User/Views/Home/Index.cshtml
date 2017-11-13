@@ -1,0 +1,29 @@
+﻿@using Testing_QLThuVien.Models;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<Sach>
+@{
+    ViewBag.Title = "Sach";
+    Layout = "~/Areas/User/Views/Layout/NguoiDungLayout.cshtml";
+}
+
+@section NoiDungBenPhai{
+
+}
+
+<div >
+    @Html.Action("SachMoiPartial", "Sach", new { page = 1 })
+</div>
+
+<div style="clear:both"></div>
+@* Tạo link liên kết các trang
+    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/ @Model.PageCount*@
+<div class="MenuTrang" style="text-align:center">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+</div>
+
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>
+

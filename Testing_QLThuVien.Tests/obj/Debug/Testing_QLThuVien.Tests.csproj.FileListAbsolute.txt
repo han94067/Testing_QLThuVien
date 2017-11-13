@@ -45,6 +45,7 @@ E:\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\EntityFramework.xml
 E:\Testing_QLThuVien\Testing_QLThuVien.Tests\obj\Debug\Testing_QLThuVien.Tests.csprojResolveAssemblyReference.cache
 E:\Testing_QLThuVien\Testing_QLThuVien.Tests\obj\Debug\Testing_QLThuVien.Tests.dll
 E:\Testing_QLThuVien\Testing_QLThuVien.Tests\obj\Debug\Testing_QLThuVien.Tests.pdb
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\obj\Debug\Testing_QLThuVien.Tests.csprojResolveAssemblyReference.cache
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\ApplicationInsights.config
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\roslyn\csc.exe
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -76,6 +77,7 @@ E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\System.Web.WebPage
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\Testing_QLThuVien.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\System.Web.Optimization.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\EntityFramework.dll
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\PagedList.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\Testing_QLThuVien.pdb
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\Newtonsoft.Json.xml
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\System.Net.Http.Formatting.xml
@@ -89,6 +91,6 @@ E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\System.Web.WebPage
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\System.Web.WebPages.Razor.xml
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\System.Web.Optimization.xml
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\EntityFramework.xml
-E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\obj\Debug\Testing_QLThuVien.Tests.csprojResolveAssemblyReference.cache
+E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\bin\Debug\PagedList.xml
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\obj\Debug\Testing_QLThuVien.Tests.dll
 E:\GitHub\Testing_QLThuVien\Testing_QLThuVien.Tests\obj\Debug\Testing_QLThuVien.Tests.pdb

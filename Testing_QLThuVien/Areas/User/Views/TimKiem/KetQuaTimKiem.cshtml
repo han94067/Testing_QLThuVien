@@ -1,0 +1,48 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@model IPagedList<Testing_QLThuVien.Models.Sach>
+
+@{
+    ViewBag.Title = "KetQuaTimKiem";
+    Layout = "~/Areas/User/Views/Layout/NguoiDungLayout.cshtml";
+}
+
+<h2 style="margin-left:2%;font-weight:normal;color:black">Kết quả tìm kiếm</h2>
+<div style="margin-left:2%;font-weight:normal;color:black">@ViewBag.ThongBao</div>
+<hr />
+<div class="row">
+    <div class="container">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-4">
+                <div class="activity-list-update">
+                    @*<img src="@item.HinhAnh" width="50" height="50" alt="Image">*@
+                    <img style="display: block; margin: 0 auto" class="product-image img-responsive lazy" alt="Image" src="https://v2.tikicdn.com/cache/200x200/media/catalog/product/m/u/muahedaqua.u5567.d20171006.t144727.909323_2.jpg" />
+                    @*Nếu tên sách dài hơn 30 ký tự thì chúng ta sẽ cắt tên sách ra lấy từ ký tự 0 đến ký tự 35*@
+                    @if (item.TenSach.Length > 30)
+                    {
+                        <p style="text-align:center"><strong title="@item.TenSach">@item.TenSach.Substring(0, 30)...</strong><br /><a href="@Url.Action("XemChiTiet", new { @masach=item.IDSach })">Xem chi tiết</a></p>
+                    }
+                    else
+                    {
+                        <p style="text-align:center"><strong title="@item.TenSach">@item.TenSach</strong><br /><a href="@Url.Action("XemChiTiet", new { @masach=item.IDSach })">Xem chi tiết</a></p>
+                        <div class="clear"></div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<div style="clear:both"></div>
+@* Tạo link liên kết các trang*@
+@*Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/ @Model.PageCount*@
+<div class="MenuTrang" style="text-align:center">
+    @Html.PagedListPager(Model, page => Url.Action("KetQuaTimKiem", new { page = page, @sTuKhoa = ViewBag.TuKhoa }))
+</div>
+
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>
+
