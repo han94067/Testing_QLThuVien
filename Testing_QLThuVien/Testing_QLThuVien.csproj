@@ -172,6 +172,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Validation\" />
     <Folder Include="Areas\User\Models\" />
     <Folder Include="Images\" />
   </ItemGroup>
@@ -193,6 +194,7 @@
     <Compile Include="Areas\Admin\Controllers\QLSachController.cs" />
     <Compile Include="Areas\Admin\Controllers\TacGiaController.cs" />
     <Compile Include="Areas\Admin\Controllers\TheLoaiController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ValidationController.cs" />
     <Compile Include="Areas\User\Controllers\DocGiasController.cs" />
     <Compile Include="Areas\User\Controllers\GioHangController.cs" />
     <Compile Include="Areas\User\Controllers\HomeController.cs" />
@@ -340,6 +342,7 @@
     <Content Include="Areas\Admin\Scripts\skycons.js" />
     <Content Include="Areas\Admin\Scripts\vfs_fonts.js" />
     <None Include="Areas\Admin\Scripts\_references.js" />
+    <Content Include="Areas\User\Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Areas\User\Content\bootstrap.css" />
     <Content Include="Areas\User\Content\bootstrap.min.css" />
     <Content Include="Areas\User\Content\font-awesome-4.2.0\css\font-awesome.css" />
@@ -355,6 +358,7 @@
     <Content Include="Areas\User\NivoSlider\jquery.nivo.slider.js" />
     <Content Include="Areas\User\NivoSlider\jquery.nivo.slider.pack.js" />
     <Content Include="Areas\User\NivoSlider\nivo-slider.css" />
+    <Content Include="Areas\User\Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Areas\User\Scripts\bootstrap.js" />
     <Content Include="Areas\User\Scripts\bootstrap.min.js" />
     <None Include="Areas\User\Scripts\jquery-1.10.2.intellisense.js" />

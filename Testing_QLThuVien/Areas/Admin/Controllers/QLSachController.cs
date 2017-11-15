@@ -33,26 +33,25 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult ThemSach([Bind(Include = "IDSach, IDTacGia, IDNhaXuatBan, IDTheLoai, TenSach, HinhAnh, NamXuatBan, SoLuong, SoLuongTon, TriGia, TinhTrang, MoTa")] Sach sach, HttpPostedFileBase uploadfile)
         {
-            //return Json(sach, JsonRequestBehavior.AllowGet);
-            String host = "http://qlthuvien.somee.com/Images/";
-            uploadfile = Request.Files[0];
+            if (uploadfile != null)
+            {
+                //return Json(sach, JsonRequestBehavior.AllowGet);
+                String host = "http://qlthuvien.somee.com/Images/";
+                uploadfile = Request.Files[0];
 
-            //if (uploadfile.FileName != "" && uploadfile != null)
-            //{
-            var fileName = System.IO.Path.GetFileName(uploadfile.FileName);
-            var rondom = fileName;
-            //var rondom = Guid.NewGuid() + fileName;
-            var path = System.IO.Path.Combine(Server.MapPath("~/Images"), rondom);
-            var filetext = System.IO.Path.GetExtension(uploadfile.FileName).Substring(1);
-            var supportedTypes = new[] { "jpg", "jpeg", "png" };
-            //if (!supportedTypes.Contains(filetext))
-            //{
-            //    return Content("<script language='javascript' type='text/javascript'>alert('Hello world!');</script>");
-            //}
-            var image = new System.Web.Helpers.WebImage(uploadfile.InputStream);
-            image.Save(path);// lưu vào project
-            rondom = host + rondom;
-            sach.HinhAnh = rondom;// luu vào database
+                //if (uploadfile.FileName != "" && uploadfile != null)
+                //{
+                var fileName = System.IO.Path.GetFileName(uploadfile.FileName);
+                var rondom = fileName;
+                //var rondom = Guid.NewGuid() + fileName;
+                var path = System.IO.Path.Combine(Server.MapPath("~/Images"), rondom);
+                var filetext = System.IO.Path.GetExtension(uploadfile.FileName).Substring(1);
+                var supportedTypes = new[] { "jpg", "jpeg", "png" };
+                var image = new System.Web.Helpers.WebImage(uploadfile.InputStream);
+                image.Save(path);// lưu vào project
+                rondom = host + rondom;
+                sach.HinhAnh = rondom;// luu vào database
+            }
             sach.IDSach = "";
             sach.SoLuong = 0;
             sach.SoLuongTon = 0;

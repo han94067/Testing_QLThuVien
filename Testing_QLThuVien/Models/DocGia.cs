@@ -35,7 +35,7 @@ namespace Testing_QLThuVien.Models
         public string TenDocGia { get; set; }
 
         [StringLength(100, ErrorMessage = "Địa chỉ không được vượt quá 100 ký tự.")]
-        [Required(ErrorMessage = "Không được để trông địa chỉ.")]
+        [Required(ErrorMessage = "Không được để trống địa chỉ.")]
         public string DiaChi { get; set; }
 
         [StringLength(50, ErrorMessage = "Email không được vượt quá 50 ký tự.")]

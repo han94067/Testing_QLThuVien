@@ -5,6 +5,7 @@ namespace Testing_QLThuVien.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Web.Mvc;
 
     [Table("Sach")]
     public partial class Sach
@@ -31,11 +32,12 @@ namespace Testing_QLThuVien.Models
         public string IDNhaXuatBan { get; set; }
 
         [StringLength(50, ErrorMessage = "Tên sách không được vượt quá 50 kí tự.")]
-        [Required(ErrorMessage = "Xin mời nhập Tên Sách.")]
+        [Required(ErrorMessage = "Xin mời nhập Tên Sách.")]      
         public string TenSach { get; set; }
 
         [StringLength(200)]
         [Required(ErrorMessage = "Hình ảnh không được bỏ trống.")]
+        [Remote("check", "Validation", ErrorMessage = "Chỉ những file(jpg, jpeg, png) mới được hỗ trợ.")]
         public string HinhAnh { get; set; }
 
         [Required(ErrorMessage = "Xin mời nhập Năm Xuất Bản và không được nhập chữ hoặc ký tự đặc biệt.")]
