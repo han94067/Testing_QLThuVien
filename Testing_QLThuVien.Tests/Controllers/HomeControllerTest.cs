@@ -4,6 +4,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Testing_QLThuVien;
 using Testing_QLThuVien.Areas.Admin.Controllers;
 using Testing_QLThuVien.Models;
+using System.Collections.Generic;
+using System.Web.Routing;
 
 namespace Testing_QLThuVien.Tests.Controllers
 {
@@ -1025,26 +1027,28 @@ namespace Testing_QLThuVien.Tests.Controllers
             Assert.AreEqual("Xin mời nhập Trị Giá.", test[1].ErrorMessage);
         }
 
-        //[TestMethod]
-        //public void UTCID49()
-        //{
-        //    var qls = new QLSachController();
-        //    var sach = new Sach();
-        //    sach.IDSach = "";
-        //    sach.IDTacGia = "TG001";
-        //    sach.IDTheLoai = "TL001";
-        //    sach.IDNhaXuatBan = "XB001";
-        //    sach.HinhAnh = "image";//
-        //    sach.NamXuatBan = 2010;
-        //    sach.TriGia = 50000;
-        //    sach.TinhTrang = 1;
-        //    sach.TenSach = "@bs-a";
+        [TestMethod]
+        public void UTCID49()
+        {
+            var qls = new QLSachController();
+            var sach = new Sach();
+            sach.IDSach = "";
+            sach.IDTacGia = "TG001";
+            sach.IDTheLoai = "TL001";
+            sach.IDNhaXuatBan = "XB001";
+            sach.HinhAnh = "image";
+            sach.NamXuatBan = 2010;
+            sach.TriGia = 50000;
+            sach.TinhTrang = 1;
+            sach.TenSach = "@bs-a";
 
-        //    var test = TestModelHelper.Validate(sach);
+            var test = TestModelHelper.Validate(sach);
+            var val = new ValidationController();
+            var re = val.checka(sach.HinhAnh) as JsonResult;
+            IDictionary<string, object> data = (IDictionary<string, object>)new RouteValueDictionary(re.Data);
 
-        //    Assert.AreEqual(1, test.Count);
-        //    Assert.AreEqual("Xin mời nhập Năm Xuất Bản và không được nhập chữ hoặc ký tự đặc biệt.", test[0].ErrorMessage);
-        //}
+            Assert.AreEqual("Chỉ những file(jpg, jpeg, png) mới được hỗ trợ.", data["ms"]);
+        }
 
     }
 }

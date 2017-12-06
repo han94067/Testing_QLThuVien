@@ -25,7 +25,22 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
             {
                 return Json(true, JsonRequestBehavior.AllowGet);
             }
-            return Json(false, JsonRequestBehavior.AllowGet);           
+            return Json(false , JsonRequestBehavior.AllowGet);         
+        }
+
+        public ActionResult checka(string HinhAnh)
+        {
+            string temp = "";
+            String[] s = HinhAnh.Split('.');
+            foreach (var x in s)
+            {
+                temp = x;
+            }
+            if (temp == "png" || temp == "jpeg" || temp == "jpg")
+            {
+                return Json(true, JsonRequestBehavior.AllowGet);
+            }
+            return Json(new { ms = "Chỉ những file(jpg, jpeg, png) mới được hỗ trợ." }, JsonRequestBehavior.AllowGet);
         }
     }
 }
