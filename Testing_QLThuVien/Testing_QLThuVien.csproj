@@ -175,6 +175,7 @@
     <Compile Include="Areas\Admin\Controllers\MuonSachController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhapSachController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhaXuatBanController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PhieuTienPhatController.cs" />
     <Compile Include="Areas\Admin\Controllers\QLSachController.cs" />
     <Compile Include="Areas\Admin\Controllers\TacGiaController.cs" />
     <Compile Include="Areas\Admin\Controllers\TheLoaiController.cs" />
@@ -183,11 +184,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710301041254_init.cs" />
-    <Compile Include="Migrations\201710301041254_init.Designer.cs">
-      <DependentUpon>201710301041254_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BangRangBuoc.cs" />
     <Compile Include="Models\ChiTietPhieuNhapSach.cs" />
     <Compile Include="Models\ChucVu.cs" />
@@ -308,6 +304,8 @@
     <Content Include="Areas\Admin\Scripts\jquery.inputmask.bundle.min.js" />
     <Content Include="Areas\Admin\Scripts\jquery.knob.min.js" />
     <Content Include="Areas\Admin\Scripts\jquery.min.js" />
+    <Content Include="Areas\Admin\Scripts\jquery.validate.js" />
+    <Content Include="Areas\Admin\Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Areas\Admin\Scripts\jquery.vmap.js" />
     <Content Include="Areas\Admin\Scripts\jquery.vmap.sampledata.js" />
     <Content Include="Areas\Admin\Scripts\jquery.vmap.world.js" />
@@ -423,6 +421,7 @@
     <Content Include="Areas\Admin\Views\NhapSach\ChonSach.cshtml" />
     <Content Include="Areas\Admin\Views\NhapSach\CapNhatNhapSach.cshtml" />
     <Content Include="Areas\Admin\Views\NhapSach\XemPhieuNhap.cshtml" />
+    <Content Include="Areas\Admin\Views\PhieuTienPhat\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\buttons.bootstrap.min.js" />
     <Content Include="Scripts\buttons.flash.min.js" />
@@ -492,11 +491,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710301041254_init.resx">
-      <DependentUpon>201710301041254_init.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

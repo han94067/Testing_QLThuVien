@@ -80,7 +80,7 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
 
         public ActionResult ThemChiTiet(string so, string dg)
         {
-            
+
             ChiTietPhieuNhapSach ct = new ChiTietPhieuNhapSach();
             string ma = "";
             var phieu = db.PhieuNhapSaches.OrderByDescending(x => x.IDPhieuNhapSach).ToList();
@@ -97,7 +97,7 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
             //ct.DonGia = int.Parse(f["DonGia"]);
             db.ChiTietPhieuNhapSaches.Add(ct);
             db.SaveChanges();
-            return View();
+            return new EmptyResult();
         }
 
         public ActionResult CapNhatNhapSach()
@@ -109,7 +109,6 @@ namespace Testing_QLThuVien.Areas.Admin.Controllers
                 ma = item.IDPhieuNhapSach;
                 break;
             }
-
             return PartialView(db.PhieuNhapSaches.Find(ma));
         }
 

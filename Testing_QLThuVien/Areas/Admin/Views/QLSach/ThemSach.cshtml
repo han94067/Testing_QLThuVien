@@ -1,6 +1,6 @@
 ﻿@model Testing_QLThuVien.Models.Sach
 
-@using (Html.BeginForm("ThemSach", "QLSach"))
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
@@ -14,7 +14,7 @@
         <div class="form-horizontal form-label-left" novalidate">
 
 
-            <div class="form-group">
+            <div class="form-group" id="tena">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
                     Tên Sách <span class="required">*</span>
                 </label>
@@ -28,7 +28,8 @@
                     Tên Tác Giả <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type="text" name="TenTacGia" class="form-control" />
+                    @Html.DropDownList("IDTacGia", null, htmlAttributes: new { @class = "form-control" })
+                    
                 </div>
             </div>
             <div class="form-group">
@@ -36,7 +37,8 @@
                     Tên Nhà Xuất Bản <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input type="text" name="NhaXuatBan" class="form-control" />
+                    @*<input type="text" name="NhaXuatBan" class="form-control" />*@
+                    @Html.DropDownList("IDNhaXuatBan", null, htmlAttributes: new { @class = "form-control" })
                 </div>
             </div>
             <div class="form-group">
@@ -67,7 +69,7 @@
             </div>
             <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-                    Mô Tả <span class="required">*</span>
+                    Mô Tả
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     @Html.EditorFor(model => model.MoTa, new { htmlAttributes = new { @class = "form-control" } })
@@ -82,4 +84,7 @@
     </div>
 }
 
+<!--Validation-->
+<script src="~/Areas/Admin/Scripts/jquery.validate.js"></script>
+<script src="~/Areas/Admin/Scripts/jquery.validate.unobtrusive.js"></script>
 

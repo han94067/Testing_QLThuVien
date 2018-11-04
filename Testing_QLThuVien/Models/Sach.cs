@@ -30,18 +30,23 @@ namespace Testing_QLThuVien.Models
         [StringLength(5)]
         public string IDNhaXuatBan { get; set; }
 
-        [StringLength(50)]
+        [StringLength(50, ErrorMessage = "Tên sách không được vượt quá 50 kí tự.")]
+        [Required(ErrorMessage = "Xin mời nhập Tên Sách")]
         public string TenSach { get; set; }
 
         [StringLength(200)]
         public string HinhAnh { get; set; }
 
+        [Required(ErrorMessage = "Xin mời nhập Năm Xuất Bản")]
+        [Range(2000, 2017, ErrorMessage = "Năm Xuất Bản từ năm 2000 đến năm 2017")]
         public int? NamXuatBan { get; set; }
 
         public int? SoLuong { get; set; }
 
         public int? SoLuongTon { get; set; }
 
+        [Required(ErrorMessage = "Xin mời nhập Trị Giá")]
+        [Range(1000, 10000000, ErrorMessage = "Trị Giá từ năm 1000 đến năm 10000000")]
         public decimal? TriGia { get; set; }
 
         public int? TinhTrang { get; set; }

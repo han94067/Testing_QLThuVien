@@ -72,7 +72,7 @@
                                         <li><a href="@Url.Action("SachQuaHan", "MuonSach")">Sách Quá Hạn 4</a></li>
                                         <li><a href="@Url.Action("DSPhieuNhap", "NhapSach")">Phiếu Nhập</a></li>
                                         <li><a href="form_advanced.html">Lập Phiếu Phạt</a></li>
-                                        <li><a href="form_validation.html">Lập Phiếu Nhập Sách</a></li>
+                                        <li><a href="@Url.Action("Index", "PhieuTienPhat")">Phiếu Nhập Sách</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -136,13 +136,9 @@
             </div>
 
 
-
-
             <div class="right_col" role="main">
                 @RenderBody()
             </div>
-
-
 
 
             <footer>
@@ -159,9 +155,10 @@
 
     <!-- jQuery -->
     <script src="~/Areas/Admin/Scripts/jquery.min.js"></script>
+
     <!-- Bootstrap -->
     <script src="~/Areas/Admin/Scripts/bootstrap.min.js"></script>
-    <!-- FastClick -->
+        <!-- FastClick -->
     <script src="~/Areas/Admin/Scripts/fastclick.js"></script>
     <!-- NProgress -->
     <script src="~/Areas/Admin/Scripts/nprogress.js"></script>
